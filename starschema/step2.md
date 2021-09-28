@@ -1,5 +1,5 @@
 # NodeJS-Script erstellen
 
-`npm init -y`{{execute}}
-`npm i pg`{{execute}}
-`node test.js`{{execute}}
+`npm init -y`{{execute}}<br>
+`npm i pg`{{execute}}<br>
+`node test.js`{{execute}}<br>
