@@ -23,6 +23,14 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "test.js",
+          "target": "/root/"
+        }
+      ]
     }
   },
   "environment": {
