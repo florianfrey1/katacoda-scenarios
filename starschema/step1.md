@@ -11,4 +11,4 @@ Postgres CLI starten:
 `docker exec -ti -u postgres postgres psql`{{execute}}
 
 Eine Datenbank anlegen:
-`CREATE DATABASE nodedemo;`{{execute}}
+`CREATE DATABASE nodedemo; \q`{{execute}}
