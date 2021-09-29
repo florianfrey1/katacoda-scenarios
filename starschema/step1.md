@@ -1,4 +1,7 @@
-# Datenbank einrichten
+# Umgebung einrichten
+***
+
+# Datenbank erstellen
 
 Im ersten Schritt legen wir eine neue Postgres-Datenbank an.
 
@@ -23,3 +26,14 @@ Postgres CLI starten:
 
 Eine Datenbank anlegen:
 `CREATE DATABASE starschema_demo; \q`{{execute}}
+
+## NodeJS Projekt einrichten
+
+Für das einrichten eines neuen NodeJS Projekts nutzen wir den Init-Befehl von NPM. Anschließend installieren wir lokal das Paket *pg* mithilfe von NPM.
+
+`npm init -y
+npm i pg`{{execute}}
+
+Jetzt können wir testen, ob alles erfolgreich initialisiert wurde:
+
+`node test.js`{{execute}}<br>
