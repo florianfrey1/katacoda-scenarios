@@ -3,8 +3,8 @@ const { Client } = require("pg");
 const credentials = {
   user: "postgres",
   host: "localhost",
-  database: "nodedemo",
-  password: "yourpassword",
+  database: "starschema_demo",
+  password: "password",
   port: 5432,
 }
 
