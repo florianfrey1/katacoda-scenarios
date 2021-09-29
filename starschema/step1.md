@@ -15,7 +15,7 @@ Dafür verwenden in diesem Beispiel Docker für das Ausführen der Postgres-Date
 > 1. -e POSTGRES_PASSWORD: Passwort der Datenbank.
 > 1. -p: Portmapping eines internen auf einen externen Port.
 > 1. -d: Das Docker-Image.
-<br>
+
 > ⚠ **Startzeit des Docker-Containers**: Das Starten eines Docker-Containers kann etwas Zeit in Anspruch nehmen. Wird der nachfolgende Befehl zu früh ausgeführt, kann es dementsprechend zu einem Fehler kommen.
 
 Postgres CLI starten:
