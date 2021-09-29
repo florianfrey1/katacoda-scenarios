@@ -19,7 +19,11 @@ Dafür verwenden in diesem Beispiel Docker für das Ausführen der Postgres-Date
 > 1. -p: Portmapping eines internen auf einen externen Port.
 > 1. -d: Das Docker-Image.
 
-> ⚠ **Startzeit des Docker-Containers**: Das Starten eines Docker-Containers kann etwas Zeit in Anspruch nehmen. Wird der nachfolgende Befehl zu früh ausgeführt, kann es dementsprechend zu einem Fehler kommen.
+<div style="background: #ffb829; width: 100%; border-radius: 3px; box-sizing: border-box; padding: 20px; margin: 20px 0; color: black">
+    <div style="font-size: 20px; display: inline; position: relative">⚠</div>
+    <div style="position: relative; display: inline; font-size: 20px">Startzeit eines Docker-Containers</div>
+    <p>Das Starten eines Docker-Containers kann etwas Zeit in Anspruch nehmen. Wird der nachfolgende Befehl zu früh ausgeführt, kann es dementsprechend zu einem Fehler kommen.</p>
+</div>
 
 Postgres CLI starten:
 `docker exec -ti -u postgres postgres_starschema_demo psql`{{execute}}
