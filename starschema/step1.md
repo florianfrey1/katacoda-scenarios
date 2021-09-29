@@ -1,4 +1,4 @@
-# Postgres einrichten
+# Datenbank einrichten
 
 Im ersten Schritt legen wir eine neue Postgres-Datenbank an.
 
