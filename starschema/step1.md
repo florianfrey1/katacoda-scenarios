@@ -8,6 +8,8 @@ Postgres-Datenbank als Docker-Container starten:
       -d postgres
 docker wait postgres_starschema_demo`{{execute}}
 
+> ⚠ :warning: **If you are using mobile browser**: Be very careful here!
+
 Postgres CLI starten:
 `docker exec -ti -u postgres postgres_starschema_demo psql`{{execute}}
 
