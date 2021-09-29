@@ -14,8 +14,8 @@ Dafür verwenden in diesem Beispiel Docker für das Ausführen der Postgres-Date
       -d postgres`{{execute}}
 
 <div style="background: #29bfff; width: 100%; border-radius: 3px; box-sizing: border-box; padding: 20px; margin: 20px 0; color: black">
-    <div style="font-size: 120%; font-weight: bold; display: inline; position: relative">🛈</div>
-    <div style="position: relative; display: inline; font-weight: bold">Beschreibung des Befehls</div>
+    <div style="font-size: 110%; font-weight: bold; display: inline; position: relative">🛈</div>
+    <div style="position: relative; display: inline; font-size: 110%; font-weight: bold">Beschreibung des Befehls</div>
     <ol>
       <li><strong>--name</strong>: Name der Datenbank.</li>
       <li><strong>-e POSTGRES_PASSWORD</strong>: Passwort der Datenbank.</li>
@@ -25,8 +25,8 @@ Dafür verwenden in diesem Beispiel Docker für das Ausführen der Postgres-Date
 </div>
 
 <div style="background: #ffb829; width: 100%; border-radius: 3px; box-sizing: border-box; padding: 20px; margin: 20px 0; color: black">
-    <div style="font-weight: bold; display: inline; position: relative">⚠</div>
-    <div style="position: relative; display: inline; font-size: 120%; font-weight: bold">Startzeit eines Docker-Containers</div>
+    <div style="font-size: 110%; font-weight: bold; display: inline; position: relative">⚠</div>
+    <div style="position: relative; display: inline; font-size: 110%; font-weight: bold">Startzeit eines Docker-Containers</div>
     <p>Das Starten eines Docker-Containers kann etwas Zeit in Anspruch nehmen. Wird der nachfolgende Befehl zu früh ausgeführt, kann es dementsprechend zu einem Fehler kommen.</p>
 </div>
 
