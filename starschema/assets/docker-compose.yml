@@ -1,0 +1,7 @@
+version: "3"
+services:
+  postgres:
+    image: "postgres"
+    hostname: starschema_demo
+    ports:
+      - "5432:5432"

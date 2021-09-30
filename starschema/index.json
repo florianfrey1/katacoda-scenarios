@@ -2,7 +2,7 @@
   "title": "Starschema",
   "description": "",
   "difficulty": "Beginner",
-  "time": "5 minutes",
+  "time": "10 minutes",
   "details": {
     "steps": [
       {
@@ -19,6 +19,7 @@
       }
     ],
     "intro": {
+      "script": "postgres.sh",
       "text": "intro.md"
     },
     "finish": {
@@ -28,6 +29,14 @@
       "host01": [
         {
           "file": "test.js",
+          "target": "/root/"
+        },
+        {
+          "file": "docker-compose.yml",
+          "target": "/root/"
+        },
+        {
+          "file": "postgres.sh",
           "target": "/root/"
         }
       ]
