@@ -1,5 +1,7 @@
 #!/bin/bash
 
+node /root/hi.js
+
 function print_status {
     clear
 
