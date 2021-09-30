@@ -1,6 +1,6 @@
 wget https://github.com/ufoscout/docker-compose-wait/releases/download/2.9.0/wait
 chmod +x wait
-./wait
+./wait WAIT_HOSTS=127.0.0.1:5432
 
 # Run the postgres database via the docker-compose command
 docker-compose up -d
