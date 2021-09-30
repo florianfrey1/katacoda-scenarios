@@ -4,6 +4,7 @@ stty flusho
 stty -echo
 clear
 echo "Die Umgebung wird vorbereitet..."
+sleep 2s
 
 ./setup.sh &> /dev/null
 
