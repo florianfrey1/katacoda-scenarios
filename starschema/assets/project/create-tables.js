@@ -16,7 +16,7 @@ async function executeSqlFile(database, filename) {
 
 	await client.connect()
 
-	const sql = await fsp.readFile(filename)
+	const sql = (await fsp.readFile(filename)).toString()
 	console.log(sql)
 
 	await client.query(sql)
@@ -24,5 +24,7 @@ async function executeSqlFile(database, filename) {
 }
 
 (async () => {
-	const clientResult = await executeSqlFile('star_database', '/root/project/sqls/star_database_tables.sql')
+	await executeSqlFile('relational_database', '/root/project/sqls/relational_database_tables.sql')
+	await executeSqlFile('star_database', '/root/project/sqls/star_database_tables.sql')
+	console.log('Tabellen erstellt und mit Demodaten gefüllt.')
 })()
