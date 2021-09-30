@@ -8,10 +8,12 @@ echo "   Dateien ❌"
 echo "   Postgres-Datenbank ❌"
 echo "   NodeJS-Umgebung ❌"
 
-until [ -f ./setup.sh ]
-do
-     sleep 1
-done
+{
+    until [ -f ./setup.sh ]
+    do
+        sleep 1
+    done
+} &> /dev/null
 
 clear
 echo "Umgebung wird vorbereitet..."
@@ -25,7 +27,7 @@ echo "   NodeJS-Umgebung ❌"
 
     # Wait for the postgres container to boot up
     ./wait-for-it.sh -t 0 127.0.0.1:5432
-} > /dev/null
+} &> /dev/null
 
 clear
 echo "Umgebung wird vorbereitet..."
@@ -43,7 +45,7 @@ echo "   NodeJS-Umgebung ❌"
     # connect from node js to the postgres databse:
     # https://github.com/brianc/node-postgres.
     npm i pg
-} > /dev/null
+} &> /dev/null
 
 clear
 echo "Umgebung ist bereit."
