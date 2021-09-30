@@ -57,5 +57,7 @@ print_status false ✅ ✅ ❌
 
 print_status true ✅ ✅ ✅
 
+touch /root/environment.ready
+
 stty -flusho
 stty echo

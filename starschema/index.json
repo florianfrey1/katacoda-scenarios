@@ -7,7 +7,9 @@
     "steps": [
       {
         "title": "Umgebung",
-        "text": "step1.md"
+        "text": "step1.md",
+        "code": "init.sh",
+        "verify": "verify-environment.sh"
       },
       {
         "title": "Sternschema",
@@ -20,7 +22,6 @@
       }
     ],
     "intro": {
-      "courseData": "init.sh",
       "text": "intro.md"
     },
     "finish": {

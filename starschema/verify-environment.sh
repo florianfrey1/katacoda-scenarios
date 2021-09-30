@@ -1,0 +1,1 @@
+[ -f /root/environment.ready ] && echo "done"
