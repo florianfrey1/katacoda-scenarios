@@ -9,7 +9,8 @@
         "title": "Umgebung",
         "text": "step1.md",
         "code": "init.sh",
-        "verify": "verify-environment.sh"
+        "verify": "verify-environment.sh",
+        "answer": "answer-environment.md"
       },
       {
         "title": "Sternschema",
