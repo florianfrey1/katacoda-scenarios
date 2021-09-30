@@ -3,7 +3,7 @@
 function print_status {
     clear
 
-    if $1; then
+    if [$1]; then
         echo "Umgebung ist bereit."
     else
         echo "Umgebung wird vorbereitet..."
