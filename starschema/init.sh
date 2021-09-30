@@ -2,7 +2,7 @@
 
 stty flusho
 stty -echo
-clear
+tput clear
 echo "Umgebung wird vorbereitet..."
 echo "   Dateien ❌"
 echo "   Postgres-Datenbank ❌"
@@ -15,7 +15,7 @@ echo "   NodeJS-Umgebung ❌"
     done
 } &> /dev/null
 
-clear
+tput clear
 echo "Umgebung wird vorbereitet..."
 echo "   Dateien ✅"
 echo "   Postgres-Datenbank ❌"
@@ -29,7 +29,7 @@ echo "   NodeJS-Umgebung ❌"
     ./wait-for-it.sh -t 0 127.0.0.1:5432
 } &> /dev/null
 
-clear
+tput clear
 echo "Umgebung wird vorbereitet..."
 echo "   Dateien ✅"
 echo "   Postgres-Datenbank ✅"
@@ -47,7 +47,7 @@ echo "   NodeJS-Umgebung ❌"
     npm i pg
 } &> /dev/null
 
-clear
+tput clear
 echo "Umgebung ist bereit."
 echo "   Dateien ✅"
 echo "   Postgres-Datenbank ✅"
