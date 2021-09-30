@@ -44,6 +44,19 @@
         {
           "file": "create-databases.sql",
           "target": "/root/"
+        },
+        {
+          "file": "create-databases.sh",
+          "target": "/root/",
+          "chmod": "+x"
+        },
+        {
+          "file": "star-database.create",
+          "target": "/root/"
+        },
+        {
+          "file": "relational-database.create",
+          "target": "/root/"
         }
       ]
     }

@@ -18,3 +18,4 @@ services:
       - POSTGRES_PASSWORD=password
     volumes:
       - ./create-databases.sql:/docker-entrypoint-initdb.d/01-create-databases.sql
+      - ./create-databases.sh:/docker-entrypoint-initdb.d/02-create-databases.sh
