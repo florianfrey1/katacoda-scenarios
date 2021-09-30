@@ -9,7 +9,7 @@ echo "   Postgres-Datenbank ❌"
 echo "   NodeJS-Umgebung ❌"
 
 {
-    until [ -f ./setup.sh ]
+    until [ -f ./create-databases.sql ]
     do
         sleep 1
     done

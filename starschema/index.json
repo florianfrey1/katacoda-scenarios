@@ -42,18 +42,8 @@
           "chmod": "+x"
         },
         {
-          "file": "ready.sh",
-          "target": "/root/",
-          "chmod": "+x"
-        },
-        {
           "file": "create-databases.sql",
           "target": "/root/"
-        },
-        {
-          "file": "setup.sh",
-          "target": "/root/",
-          "chmod": "+x"
         }
       ]
     }
