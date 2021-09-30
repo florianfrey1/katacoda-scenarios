@@ -15,11 +15,12 @@
       },
       {
         "title": "Schema-Konvertierung",
-        "text": "step3.md"
+        "text": "step3.md",
+        "courseData": "create-tables.sh"
       }
     ],
     "intro": {
-      "code": "init.sh",
+      "courseData": "init.sh",
       "text": "intro.md"
     },
     "finish": {
@@ -29,21 +30,25 @@
       "host01": [
         {
           "file": "test.js",
-          "target": "/root/"
+          "target": "/root/project"
         },
         {
           "file": "docker-compose.yml",
-          "target": "/root/",
+          "target": "/root",
           "chmod": "+x"
         },
         {
           "file": "wait-for-it.sh",
-          "target": "/root/",
+          "target": "/root",
           "chmod": "+x"
         },
         {
           "file": "create-databases.sql",
-          "target": "/root/"
+          "target": "/root"
+        },
+        {
+          "file": "create-tables.js",
+          "target": "/root"
         }
       ]
     }
