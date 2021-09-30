@@ -17,6 +17,4 @@ npm i pg
 
 # Clear console and print ready message.
 clear
-echo "Die Umgebung ist jetzt bereit!"
-echo " - Die Postgres-Datenbank ist bereit"
-echo " - Das NodeJS-Projekt ist angelegt"
+./ready.sh

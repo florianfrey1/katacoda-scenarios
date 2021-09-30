@@ -42,7 +42,7 @@
           "chmod": "+x"
         },
         {
-          "file": "print.sh",
+          "file": "ready.sh",
           "target": "/root/",
           "chmod": "+x"
         },
