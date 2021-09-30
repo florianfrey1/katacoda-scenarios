@@ -5,7 +5,7 @@ docker-compose up -d
 ./wait-for-it.sh -t 0 127.0.0.1:5432 -- echo "postgres database is ready"
 
 # Create databases.
-docker exec -it postgres_database bash
+docker exec -it root_postgres_1 bash
 # CREATE DATABASE relational;
 # CREATE DATABASE star;
 # \q
