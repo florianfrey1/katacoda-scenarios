@@ -4,6 +4,7 @@ services:
     image: "postgres"
     hostname: postgres
     container_name: postgres_database
+    network_mode: bridge
     ports:
       - "5432:5432"
     environment:
