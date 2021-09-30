@@ -3,19 +3,18 @@
   "description": "",
   "difficulty": "Beginner",
   "time": "10 minutes",
-  "noindex": true,
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Umgebung",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Sternschema",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "OLTP nach OLAP",
         "text": "step3.md"
       }
     ],
@@ -31,6 +30,11 @@
         {
           "file": "test.js",
           "target": "/root/"
+        },
+        {
+          "file": "docker-compose.yml",
+          "target": "/root/",
+          "chmod": "+x"
         }
       ]
     }
