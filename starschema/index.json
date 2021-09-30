@@ -30,19 +30,6 @@
         {
           "file": "test.js",
           "target": "/root/"
-        },
-        {
-          "file": "docker-compose.yml",
-          "target": "/root/"
-        },
-        {
-          "file": "postgres.sh",
-          "target": "/root/",
-          "chmod": "+x"
-        },
-        {
-          "file": "create_databases.sql",
-          "target": "/root/"
         }
       ]
     }
