@@ -57,7 +57,5 @@
     "imageid": "ubuntu:2004"
   },
   "files": [
-    "app.js",
-    "index.js"
   ]
 }
