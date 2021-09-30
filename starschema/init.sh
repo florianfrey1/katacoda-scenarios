@@ -3,7 +3,7 @@
 stty flusho
 stty -echo
 
-./setup.sh
+./setup.sh &> /dev/null
 
 stty -flusho
 

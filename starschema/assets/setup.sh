@@ -1,6 +1,5 @@
 #!/bin/bash
 
-{
 # Run the postgres database via the docker-compose command
 docker-compose up -d 
 
@@ -15,4 +14,3 @@ npm init -y
 # connect from node js to the postgres databse:
 # https://github.com/brianc/node-postgres.
 npm i pg
-} &> /dev/null
