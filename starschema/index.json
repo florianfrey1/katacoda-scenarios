@@ -16,7 +16,7 @@
       {
         "title": "Schema-Konvertierung",
         "text": "step3.md",
-        "courseData": "create-tables.sh"
+        "code": "create-tables.sh"
       }
     ],
     "intro": {
