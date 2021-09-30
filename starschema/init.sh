@@ -9,7 +9,6 @@ function print_status {
         echo "Umgebung wird vorbereitet..."
     fi
 
-    echo "Umgebung wird vorbereitet..."
     echo "   Dateien $2"
     echo "   Postgres-Datenbank $3"
     echo "   NodeJS-Umgebung $4"
