@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Run the postgres database via the docker-compose command
 docker-compose up
 
