@@ -2,7 +2,8 @@ version: "3.1"
 services:
   postgres:
     image: "postgres"
-    container_name: starschema_demo
+    hostname: postgres
+    container_name: postgres_database
     ports:
       - "5432:5432"
     environment:
