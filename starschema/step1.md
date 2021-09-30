@@ -1,48 +1,8 @@
-# Umgebung einrichten
-***
+Bevor es los geht: Noch ein paar Wort zur verwendeten Umgebung.
 
-# Datenbank erstellen
-
-Im ersten Schritt legen wir eine neue Postgres-Datenbank an.
-
-Dafür verwenden in diesem Beispiel Docker für das Ausführen der Postgres-Datenbank:
-
-`docker run \
-      --name postgres_starschema_demo \
-      -e POSTGRES_PASSWORD=password \
-      -p 5432:5432 \
-      -d postgres`{{execute}}
+Als Datenbank wird **Postgres** via eines Docker-Containers verwendet. Praktische Beispiele werden in **JavaScript** unter Verwendung von NodeJS ausgeführt.
 
 <div style="background: #29bfff; width: 100%; border-radius: 3px; box-sizing: border-box; padding: 20px; margin: 20px 0; color: black">
-    <div style="font-size: 110%; font-weight: bold; display: inline; position: relative">🛈</div>
-    <div style="position: relative; display: inline; font-size: 110%; font-weight: bold">Beschreibung des Befehls</div>
-    <ol>
-      <li><strong>--name</strong>: Name der Datenbank.</li>
-      <li><strong>-e POSTGRES_PASSWORD</strong>: Passwort der Datenbank.</li>
-      <li><strong>-p</strong>: Portmapping eines internen auf einen externen Port.</li>
-      <li><strong>-d</strong>: Das Docker-Image.</li>
-    </ol>
+    <div style="position: relative; font-size: 110%; font-weight: bold">🛈 Konfiguration der Umgebung</div>
+    <p>Die Umgebung wird am Anfang dieser Katacoda <strong>automatisch</strong> eingerichtet. Bei Interesse bitte direkt in den Quellcode schauen: <a href="https://github.com/florianfrey1/katacoda-scenarios/tree/main/starschema">GitHub</a>.</p>
 </div>
-
-<div style="background: #ffb829; width: 100%; border-radius: 3px; box-sizing: border-box; padding: 20px; margin: 20px 0; color: black">
-    <div style="font-size: 110%; font-weight: bold; display: inline; position: relative">⚠</div>
-    <div style="position: relative; display: inline; font-size: 110%; font-weight: bold">Startzeit eines Docker-Containers</div>
-    <p>Das Starten eines Docker-Containers kann etwas Zeit in Anspruch nehmen. Wird der nachfolgende Befehl zu früh ausgeführt, kann es dementsprechend zu einem Fehler kommen.</p>
-</div>
-
-Postgres CLI starten:
-`docker exec -ti -u postgres postgres_starschema_demo psql`{{execute}}
-
-Eine Datenbank anlegen:
-`CREATE DATABASE starschema_demo; \q`{{execute}}
-
-## NodeJS Projekt einrichten
-
-Für das einrichten eines neuen NodeJS Projekts nutzen wir den Init-Befehl von NPM. Anschließend installieren wir lokal das Paket *pg* mithilfe von NPM.
-
-`npm init -y
-npm i pg`{{execute}}
-
-Jetzt können wir testen, ob alles erfolgreich initialisiert wurde:
-
-`node test.js`{{execute}}<br>
