@@ -19,7 +19,7 @@
       }
     ],
     "intro": {
-      "code": "postgres.sh",
+      "code": "init.sh",
       "text": "intro.md"
     },
     "finish": {
