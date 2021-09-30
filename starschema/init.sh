@@ -1,5 +1,6 @@
 #!/bin/bash
 
+stty flusho
 stty -echo
 
 # Run the postgres database via the docker-compose command
@@ -16,6 +17,8 @@ npm init -y
 # connect from node js to the postgres databse:
 # https://github.com/brianc/node-postgres.
 npm i pg
+
+stty -flusho
 
 clear
 echo "Die Umgebung ist jetzt bereit!"
