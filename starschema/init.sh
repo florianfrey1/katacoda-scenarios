@@ -46,11 +46,10 @@ echo "   NodeJS-Umgebung ❌"
 } &> /dev/null
 
 stty -flusho
+stty echo
 
 clear
 echo "Umgebung ist bereit."
 echo "   Dateien ✅"
 echo "   Postgres-Datenbank ✅"
 echo "   NodeJS-Umgebung ✅"
-
-stty echo
