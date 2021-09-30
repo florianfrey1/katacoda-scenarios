@@ -50,7 +50,7 @@
   },
   "environment": {
     "uilayout": "editor-terminal",
-    "uieditorpath": "/root/starschema",
+    "uieditorpath": "/root/project",
     "uisettings": "javascript"
   },
   "backend": {
