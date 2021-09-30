@@ -1,6 +1,0 @@
-CREATE TABLE IF NOT EXISTS time (
-    id INTEGER PRIMARY KEY,
-    day INTEGER ,
-    month INTEGER,
-    year INTEGER
-);

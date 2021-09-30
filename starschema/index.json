@@ -49,6 +49,14 @@
         {
           "file": "project/create-tables.js",
           "target": "/root/project"
+        },
+        {
+          "file": "project/sqls/relational_database_tables.sql",
+          "target": "/root/project/sqls"
+        },
+        {
+          "file": "project/sqls/star_database_tables.sql",
+          "target": "/root/project/sqls"
         }
       ]
     }
@@ -61,6 +69,5 @@
   "backend": {
     "imageid": "ubuntu:2004"
   },
-  "files": [
-  ]
+  "files": []
 }
