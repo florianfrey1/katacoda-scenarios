@@ -1,12 +1,24 @@
 #!/bin/bash
 
+function print_status {
+    clear
+
+    if $1; then
+        echo "Umgebung ist bereit."
+    else
+        echo "Umgebung wird vorbereitet..."
+    fi
+
+    echo "Umgebung wird vorbereitet..."
+    echo "   Dateien $2"
+    echo "   Postgres-Datenbank $3"
+    echo "   NodeJS-Umgebung $4"
+}  
+
 stty flusho
 stty -echo
-tput clear
-echo "Umgebung wird vorbereitet..."
-echo "   Dateien ❌"
-echo "   Postgres-Datenbank ❌"
-echo "   NodeJS-Umgebung ❌"
+
+print_status 0 ❌ ❌ ❌
 
 {
     until [ -f ./create-databases.sql ]
@@ -15,11 +27,7 @@ echo "   NodeJS-Umgebung ❌"
     done
 } &> /dev/null
 
-tput clear
-echo "Umgebung wird vorbereitet..."
-echo "   Dateien ✅"
-echo "   Postgres-Datenbank ❌"
-echo "   NodeJS-Umgebung ❌"
+print_status 0 ✅ ❌ ❌
 
 {
     # Run the postgres database via the docker-compose command
@@ -29,11 +37,7 @@ echo "   NodeJS-Umgebung ❌"
     ./wait-for-it.sh -t 0 127.0.0.1:5432
 } &> /dev/null
 
-tput clear
-echo "Umgebung wird vorbereitet..."
-echo "   Dateien ✅"
-echo "   Postgres-Datenbank ✅"
-echo "   NodeJS-Umgebung ❌"
+print_status 0 ✅ ✅ ❌
 
 {
     # Initialize the direktory for the node.js projekt (in the
@@ -47,11 +51,7 @@ echo "   NodeJS-Umgebung ❌"
     npm i pg
 } &> /dev/null
 
-tput clear
-echo "Umgebung ist bereit."
-echo "   Dateien ✅"
-echo "   Postgres-Datenbank ✅"
-echo "   NodeJS-Umgebung ✅"
+print_status 1 ✅ ✅ ✅
 
 stty -flusho
 stty echo
