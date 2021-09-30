@@ -1,4 +1,4 @@
-CREATE TABLE store (
+CREATE TABLE IF NOT EXISTS store (
     id INTEGER PRIMARY KEY,
     city VARCHAR
 );

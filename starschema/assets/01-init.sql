@@ -1,2 +1,0 @@
-CREATE DATABASE relational;
-CREATE DATABASE star;

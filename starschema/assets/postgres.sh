@@ -8,7 +8,7 @@ docker-compose up -d
 # docker run --net bridge --rm dokku/wait -p 5432
 
 # Create databases.
-# docker exec -it postgres_database bash
+docker exec -it postgres_database bash
 # CREATE DATABASE relational;
 # CREATE DATABASE star;
 # \q

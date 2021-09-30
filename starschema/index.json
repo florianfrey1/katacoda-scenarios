@@ -19,7 +19,7 @@
       }
     ],
     "intro": {
-      "script": "postgres.sh",
+      "code": "postgres.sh",
       "text": "intro.md"
     },
     "finish": {
@@ -41,7 +41,7 @@
           "chmod": "+x"
         },
         {
-          "file": "01-init.sql",
+          "file": "create_databases.sql",
           "target": "/root/"
         }
       ]

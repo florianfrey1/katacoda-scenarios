@@ -1,4 +1,4 @@
-CREATE TABLE sales (
+CREATE TABLE IF NOT EXISTS sales (
     sales INTEGER,
     revenue INTEGER,
     quantity INTEGER,
