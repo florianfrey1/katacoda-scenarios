@@ -30,6 +30,10 @@
     "assets": {
       "host01": [
         {
+          "file": "init.js",
+          "target": "/root"
+        },
+        {
           "file": "test.js",
           "target": "/root/project"
         },
