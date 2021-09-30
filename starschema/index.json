@@ -47,8 +47,8 @@
           "target": "/root"
         },
         {
-          "file": "create-tables.js",
-          "target": "/root"
+          "file": "project/create-tables.js",
+          "target": "/root/project"
         }
       ]
     }
