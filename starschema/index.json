@@ -40,6 +40,10 @@
           "file": "wait-for-it.sh",
           "target": "/root/",
           "chmod": "+x"
+        },
+        {
+          "file": "create-databases.sql",
+          "target": "/root/"
         }
       ]
     }
