@@ -3,7 +3,7 @@
 function print_status {
     clear
 
-    if [$1]; then
+    if ["$1" = true]; then
         echo "Umgebung ist bereit."
     else
         echo "Umgebung wird vorbereitet..."
@@ -18,7 +18,7 @@ function print_status {
 stty flusho
 stty -echo
 
-print_status 0 ❌ ❌ ❌
+print_status false ❌ ❌ ❌
 
 {
     until [ -f ./create-databases.sql ]
@@ -27,7 +27,7 @@ print_status 0 ❌ ❌ ❌
     done
 } &> /dev/null
 
-print_status 0 ✅ ❌ ❌
+print_status false ✅ ❌ ❌
 
 {
     # Run the postgres database via the docker-compose command
@@ -37,7 +37,7 @@ print_status 0 ✅ ❌ ❌
     ./wait-for-it.sh -t 0 127.0.0.1:5432
 } &> /dev/null
 
-print_status 0 ✅ ✅ ❌
+print_status false ✅ ✅ ❌
 
 {
     # Initialize the direktory for the node.js projekt (in the
@@ -51,7 +51,7 @@ print_status 0 ✅ ✅ ❌
     npm i pg
 } &> /dev/null
 
-print_status 1 ✅ ✅ ✅
+print_status true ✅ ✅ ✅
 
 stty -flusho
 stty echo
