@@ -7,7 +7,7 @@ docker-compose up -d
 
 wget https://github.com/ufoscout/docker-compose-wait/releases/download/2.9.0/wait
 chmod +x wait
-/wait
+./wait
 
 # Create databases.
 docker exec -ti -u postgres postgres_database psql
