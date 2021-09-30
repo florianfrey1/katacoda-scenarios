@@ -1,2 +1,2 @@
 #!/bin/bash
-node create-tables.js
+node ./project/create-tables.js
