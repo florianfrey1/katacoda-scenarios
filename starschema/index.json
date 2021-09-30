@@ -8,7 +8,7 @@
       {
         "title": "Umgebung",
         "text": "step1.md",
-        "code": "init2.sh",
+        "code": "init.sh",
         "verify": "verify-step1.sh"
       },
       {
@@ -29,10 +29,6 @@
     },
     "assets": {
       "host01": [
-        {
-          "file": "init.js",
-          "target": "/root"
-        },
         {
           "file": "test.js",
           "target": "/root/project"
