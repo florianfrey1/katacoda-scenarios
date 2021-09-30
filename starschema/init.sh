@@ -2,15 +2,22 @@
 
 stty flusho
 stty -echo
-clear
-echo "Die Umgebung wird vorbereitet..."
+tput clear
+echo "Umgebung wird vorbereitet..."
+tput cup 3 1
+echo "Dateien ❌"
+tput cup 3 2
+echo "Postgres-Datenbank ❌"
+tput cup 3 3
+echo "NodeJS-Umgebung ❌"
 
 until [ -f ./setup.sh ]
 do
      sleep 1
 done
 
-echo "Dateien sind geladen ✅"
+tput cup 3 1
+echo "Dateien ✅"
 
 # Run the postgres database via the docker-compose command
 docker-compose up -d &> /dev/null
@@ -18,6 +25,7 @@ docker-compose up -d &> /dev/null
 # Wait for the postgres container to boot up
 ./wait-for-it.sh -t 0 127.0.0.1:5432 &> /dev/null
 
+tput cup 3 2
 echo "Postgres-Datenbank ✅"
 
 # Initialize the direktory for the node.js projekt (in the
@@ -30,13 +38,10 @@ npm init -y &> /dev/null
 # https://github.com/brianc/node-postgres.
 npm i pg &> /dev/null
 
+tput cup 3 3
 echo "NodeJS-Umgebung ✅"
+tput cup 0 0
+echo "Umgebung ist bereit."
 
 stty -flusho
-
-clear
-echo "Die Umgebung ist bereit!"
-echo " - Die Postgres-Datenbank ist bereit"
-echo " - Das NodeJS-Projekt ist angelegt"
-
 stty echo
