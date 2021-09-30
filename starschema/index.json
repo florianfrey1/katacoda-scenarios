@@ -41,9 +41,8 @@
           "chmod": "+x"
         },
         {
-          "file": "wait-for-it.sh",
-          "target": "/root/",
-          "chmod": "+x"
+          "file": "01-init.sql",
+          "target": "/root/"
         }
       ]
     }
