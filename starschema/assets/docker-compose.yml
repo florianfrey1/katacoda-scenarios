@@ -17,4 +17,4 @@ services:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=password
     volumes:
-      - ./01-init.sql:/docker-entrypoint-initdb.d/01-init.sql
+      - ./create-databases.sql:/docker-entrypoint-initdb.d/01-create-databases.sql
