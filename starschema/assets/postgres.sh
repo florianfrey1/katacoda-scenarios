@@ -1,5 +1,3 @@
-wget https://github.com/vishnubob/wait-for-it.git
-
 # Run the postgres database via the docker-compose command
 docker-compose up -d
 
