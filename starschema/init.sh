@@ -39,10 +39,15 @@ print_status false ✅ ❌ ❌
 print_status false ✅ ✅ ❌
 
 {
+    # Create project folder.
+    mkdir project
+
+    # Go to the project folder.
+    cd project
+
     # Initialize the direktory for the node.js projekt (in the
     # current /root folder).
     npm init -y
-
 
     # Install the pg module via npm. The pg module is used to
     # connect from node js to the postgres databse:

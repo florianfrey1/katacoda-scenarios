@@ -49,9 +49,15 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/root/starschema",
+    "uisettings": "javascript"
   },
   "backend": {
     "imageid": "ubuntu:2004"
-  }
+  },
+  "files": [
+    "app.js",
+    "index.js"
+  ]
 }
