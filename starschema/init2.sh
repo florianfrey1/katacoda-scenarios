@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# stty flusho
-# stty -echo
+stty flusho
+stty -echo
+clear
 
 until [ -f ./init.js ]
 do
@@ -10,5 +11,5 @@ done
 
 node init.js
 
-# stty -flusho
-# stty echo
+stty -flusho
+stty echo
