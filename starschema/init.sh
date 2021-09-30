@@ -4,7 +4,13 @@ stty flusho
 stty -echo
 clear
 echo "Die Umgebung wird vorbereitet..."
-sleep 2s
+
+until [ -f ./setup.sh ]
+do
+     sleep 1
+done
+
+echo "Files uploaded."
 
 ./setup.sh &> /dev/null
 
