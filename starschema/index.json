@@ -60,7 +60,7 @@
           "target": "/root/project/sqls"
         },
         {
-          "file": "oltp_simple_shop_database.svg",
+          "file": "oltp_simple_shop_database.png",
           "target": "/root"
         }
       ]
