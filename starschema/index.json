@@ -30,10 +30,6 @@
     "assets": {
       "host01": [
         {
-          "file": "test.js",
-          "target": "/root/project"
-        },
-        {
           "file": "docker-compose.yml",
           "target": "/root",
           "chmod": "+x"
@@ -46,18 +42,6 @@
         {
           "file": "create-databases.sql",
           "target": "/root"
-        },
-        {
-          "file": "project/create-tables.js",
-          "target": "/root/project"
-        },
-        {
-          "file": "project/sqls/relational_database_tables.sql",
-          "target": "/root/project/sqls"
-        },
-        {
-          "file": "project/sqls/star_database_tables.sql",
-          "target": "/root/project/sqls"
         },
         {
           "file": "oltp_simple_shop_database.svg",
