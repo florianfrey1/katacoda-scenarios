@@ -36,8 +36,8 @@ print_status false ✅ ❌
     #     sleep 1
     # done
 
-    # # Wait for the postgres container to boot up
-    # ./wait-for-it.sh -t 0 127.0.0.1:5432
+    # Wait for the postgres container to boot up
+    ./wait-for-it.sh -t 0 127.0.0.1:5432
 # } &> /dev/null
 
 print_status true ✅ ✅ 
