@@ -14,7 +14,7 @@ LEFT JOIN Artikel ON Artikel.id = Position.artikel_id;`{{execute}}
 
 Abfragen:
 
-`SELECT Artikel.bezeichnung, COALESCE(SUM(umsatz), 0) AS umsatz FROM Verkauf
-FULL JOIN artikel on Artikel.id = Verkauf.artikel_id
-GROUP BY Artikel.id
+`SELECT Kunde.vorname, COALESCE(SUM(umsatz), 0) AS umsatz FROM Verkauf
+FULL JOIN artikel on Kunde.id = Verkauf.kunde_id
+GROUP BY Kunde.id
 ORDER BY umsatz DESC;`{{execute}}
