@@ -1,11 +1,7 @@
 Jetzt zum praktischen Teil! Ein kleines Beispiels eines Webshops soll den Unterschied zwischen einem relationalen OLTP- und einem dimensionalen OLAP-System zeigen.
 
-| ![Simple Shop Database (OLTP)](oltp_simple_shop_database.svg) |
-|:--:|
-| *Abbildung 1: Relationales Schema eines einfachen Webshops* |
-
 ![Simple Shop Database (OLTP)](oltp_simple_shop_database.svg)
-*Abbildung 1: Relationales Schema eines einfachen Webshops*
+<i style="font-size: 80%">Abbildung 1: Relationales Schema eines einfachen Webshops</i>
 
 In Abbildung 1 das relationale Schema eines stark vereinfachten Webshops dargestellt. Dieses Schema ist in der Datenbank `relational_database` angelegt und mit Demo-Daten gefüllt.
 
