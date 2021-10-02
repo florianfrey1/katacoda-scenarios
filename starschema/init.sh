@@ -42,11 +42,11 @@ touch /root/environment.ready
 stty -flusho
 stty echo
 
-docker ps
+# docker ps
 
-until ["$( docker container inspect -f '{{.State.Status}}' root_postgres_1 )" != "running"]
+until ["$( docker container inspect -f '{{.State.Health}}' root_postgres_1 )" != "healthy"]
 do
-    echo "$( docker container inspect -f '{{.State.Status}}' root_postgres_1 )"
+    echo "$( docker container inspect -f '{{.State.Health}}' root_postgres_1 )"
     sleep 1
 done
 # docker exec -it root_postgres_1 psql demo
