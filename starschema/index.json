@@ -8,7 +8,8 @@
       {
         "title": "Umgebung",
         "text": "step1.md",
-        "code": "init.sh",
+        "code": "monitor-init.sh",
+        "courseData": "init.sh",
         "verify": "verify-step1.sh"
       },
       {
