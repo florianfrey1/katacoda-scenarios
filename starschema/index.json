@@ -16,7 +16,7 @@
         "text": "step2.md"
       },
       {
-        "title": "Beispiel: Relationales Datenmodell",
+        "title": "Beispiel: Relationales Modell",
         "text": "step3.md",
         "code": "create-tables.sh"
       }
