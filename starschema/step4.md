@@ -1,3 +1,4 @@
+___
 # OLAP-System
 
  ![Simple Shop Database (OLTP)](olap_simple_shop_database.svg)
