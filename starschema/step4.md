@@ -18,3 +18,8 @@ Abfragen:
 FULL JOIN Kunde on Kunde.id = Verkauf.kunde_id
 GROUP BY Kunde.id
 ORDER BY umsatz DESC;`{{execute}}
+
+`SELECT Artikel.bezeichnung, COALESCE(SUM(umsatz), 0) AS umsatz FROM Verkauf
+FULL JOIN Artikel on Artikel.id = Verkauf.artikel_id
+GROUP BY Artikel.id
+ORDER BY umsatz DESC;`{{execute}}
