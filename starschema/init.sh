@@ -40,7 +40,7 @@ touch /root/environment.ready
 
 docker exec -it root_postgres_1 psql demo
 \! stty echo
-\! clear
+\! reset
 
 # # stty -flusho
 # stty echo
