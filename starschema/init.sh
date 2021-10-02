@@ -33,12 +33,9 @@ do
 done
 
 sleep 2
-
-print_status ✅ ✅ ✅
-
 touch /root/environment.ready &> /dev/null
-
-docker exec -it root_postgres_1 psql demo &> /dev/null
+print_status ✅ ✅ ✅
+docker exec -it root_postgres_1 psql demo
 \! stty echo
 \! stty -flusho
 \! tput cnorm
