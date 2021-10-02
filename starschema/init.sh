@@ -45,11 +45,12 @@ stty echo
 # until docker exec root_postgres_1 pg_isready ; do sleep 5 ; done
 # echo  "pg is ready"
 
-until [ 1 ]
+PSQL="psql -h localhost -p 5432 -U postgres -v ON_ERROR_STOP=1"
+
+until $PSQL -c "select version()" &> /dev/null
 do
-    docker exec -it root_postgres_1 psql demo -w \q
-    echo "Waiting for PostgreSQL..."
-    sleep 1
+    echo "waiting for postgres container..."
+    sleep 2
 done
 
 echo "READY"
