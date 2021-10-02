@@ -31,13 +31,13 @@ print_status false ✅ ❌
     # Run the postgres database via the docker-compose command
     docker-compose up -d
 
-    # until docker exec -it root_postgres_1 psql -c "\c demo" &> /dev/null
-    # do
-    #     sleep 1
-    # done
+    until docker exec root_postgres_1 psql -c "\c demo" &> /dev/null
+    do
+        sleep 1
+    done
 
     # Wait for the postgres container to boot up
-    ./wait-for-it.sh -t 0 127.0.0.1:5432
+    # ./wait-for-it.sh -t 0 127.0.0.1:5432
 # } &> /dev/null
 
 print_status true ✅ ✅ 
