@@ -13,7 +13,7 @@ function print_status {
     echo "   Postgres-Datenbank $3"
 }  
 
-stty flusho
+# stty flusho
 stty -echo
 
 print_status false ❌ ❌ 
@@ -44,7 +44,7 @@ print_status true ✅ ✅
 
 touch /root/environment.ready
 
-stty -flusho
+# stty -flusho
 stty echo
 
 docker exec -it root_postgres_1 psql demo
