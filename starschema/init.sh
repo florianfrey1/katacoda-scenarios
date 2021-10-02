@@ -14,8 +14,8 @@ function print_status {
     echo "   NodeJS-Umgebung $4"
 }  
 
-stty flusho
-stty -echo
+# stty flusho
+# stty -echo
 
 print_status false ❌ ❌ ❌
 
@@ -59,5 +59,5 @@ print_status true ✅ ✅ ✅
 
 touch /root/environment.ready
 
-stty -flusho
-stty echo
+# stty -flusho
+# stty echo
