@@ -1,4 +1,9 @@
-Das praktische Beispiel dieser Katakoda wird in **Postgres** durchgeführt. Die Konfiguration der Umgebung kann einen Moment dauern...
+Die Umgebung wird konfiguriert. Bitte habe einen Moment Geduld... Wenn die Postgres-Komandozeile erscheint, kannst du fortfahren.
+
+<div style="background: #29bfff; width: 100%; border-radius: 3px; box-sizing: border-box; padding: 20px; margin: 20px 0; color: black">
+    <div style="position: relative; font-size: 110%; font-weight: bold">🛈 Tabellen und Demodaten</div>
+    <p>Alle Tabellen, die in dieser Katacoda verwendet werden, sind bereits in der Datenbank <code>demo</code> angelegt und mit Demodaten gefüllt.</p>
+</div>
 
 <div style="background: #29bfff; width: 100%; border-radius: 3px; box-sizing: border-box; padding: 20px; margin: 20px 0; color: black">
     <div style="position: relative; font-size: 110%; font-weight: bold">🛈 Quellcode</div>

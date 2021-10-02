@@ -7,11 +7,6 @@ Am Beispiel eines einfachen Webshops soll der Unterschied zwischen einem relatio
 
 In Abbildung 1 ist das relationale Schema des Webshops dargestellt. 
 
-<div style="background: #29bfff; width: 100%; border-radius: 3px; box-sizing: border-box; padding: 20px; margin: 20px 0; color: black">
-    <div style="position: relative; font-size: 110%; font-weight: bold">🛈 Tabellen und Demodaten</div>
-    <p>Alle Tabellen dieses Beispiels sind bereits in der Datenbank <code>demo</code> angelegt und mit Demodaten gefüllt.</p>
-</div>
-
 Nun möchte der Betreiber des Webshops folgende Information abrufen:
 
 > **Eine Liste aller Umsätze pro Kunde in absteigeneder Reihenfolge.**
