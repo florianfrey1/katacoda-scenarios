@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function print_status {
-    clear
+    reset
     echo "Umgebung wird vorbereitet..."
     echo "   Assets laden $1"
     echo "   Postgres Docker Container laden $2"
