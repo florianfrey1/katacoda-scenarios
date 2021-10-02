@@ -11,29 +11,24 @@ Der Betreiber des Webshops möchte nun folgende Information abrufen:
 
 Das entsprechende SQL-Statement sieht entsprechend wie folgt aus:
 
-`
-SELECT Artikel.bezeichnung, COALESCE(SUM(preis * menge), 0) AS umsatz FROM Kunde
+`SELECT Artikel.bezeichnung, COALESCE(SUM(preis * menge), 0) AS umsatz FROM Kunde
 LEFT JOIN Bestellung ON Bestellung.kunde_id = Kunde.id
 LEFT JOIN Position ON Position.bestellung_id = Bestellung.id
 FULL JOIN Artikel ON Artikel.id = Position.artikel_id
 GROUP BY Artikel.id
-ORDER BY umsatz DESC;
-`
+ORDER BY umsatz DESC;`{{execute}}
 
-```
-SELECT Artikel.bezeichnung, COALESCE(SUM(preis * menge), 0) AS umsatz FROM Kunde
+`INSERT INTO Verkauf(kunde_id, artikel_id, datum, umsatz, menge)
+SELECT kunde_id, artikel_id, datum, preis * menge AS umsatz, menge FROM Kunde
 LEFT JOIN Bestellung ON Bestellung.kunde_id = Kunde.id
 LEFT JOIN Position ON Position.bestellung_id = Bestellung.id
-FULL JOIN Artikel ON Artikel.id = Position.artikel_id
-GROUP BY Artikel.id
-ORDER BY umsatz DESC;
-```
+LEFT JOIN Artikel ON Artikel.id = Position.artikel_id;`{{execute}}
 
 ---
 
 Abfragen:
 
-SELECT Artikel.bezeichnung, COALESCE(SUM(umsatz), 0) AS umsatz FROM Verkauf
+`SELECT Artikel.bezeichnung, COALESCE(SUM(umsatz), 0) AS umsatz FROM Verkauf
 FULL JOIN artikel on Artikel.id = Verkauf.artikel_id
 GROUP BY Artikel.id
-ORDER BY umsatz DESC;
+ORDER BY umsatz DESC;`{{execute}}

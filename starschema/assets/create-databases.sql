@@ -82,8 +82,8 @@ INSERT INTO Artikel (bezeichnung, preis) VALUES
     ('Quitscheente', 5.49),
     ('Quatsch', 0.01);
 
-INSERT INTO Verkauf (kunde_id, artikel_id, datum, umsatz, menge) VALUES
-    (1, 1, '2020-12-10 08:33:12', 7.90, 2),
-    (1, 3, '2020-12-10 08:33:12', 5.49, 1),
-    (2, 2, '2021-04-17 19:28:46', 5.40, 4),
-    (1, 1, '2020-10-05 14:06:37', 7.90, 2);
+-- INSERT INTO Verkauf (kunde_id, artikel_id, datum, umsatz, menge) VALUES
+--     (1, 1, '2020-12-10 08:33:12', 7.90, 2),
+--     (1, 3, '2020-12-10 08:33:12', 5.49, 1),
+--     (2, 2, '2021-04-17 19:28:46', 5.40, 4),
+--     (1, 1, '2020-10-05 14:06:37', 7.90, 2);
