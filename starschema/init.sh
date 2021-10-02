@@ -48,4 +48,4 @@ touch /root/environment.ready
 stty echo
 
 docker exec -it root_postgres_1 psql demo
-# \dt
+\! clear
