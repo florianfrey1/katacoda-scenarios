@@ -34,16 +34,11 @@
           "chmod": "+x"
         },
         {
-          "file": "wait-for-it.sh",
-          "target": "/root",
-          "chmod": "+x"
-        },
-        {
-          "file": "create-databases.sql",
+          "file": "oltp_simple_shop_database.svg",
           "target": "/root"
         },
         {
-          "file": "oltp_simple_shop_database.svg",
+          "file": "create-databases.sql",
           "target": "/root"
         }
       ]

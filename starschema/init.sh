@@ -3,9 +3,9 @@
 function print_status {
     clear
     echo "Umgebung wird vorbereitet..."
-    echo "   Dateien $1"
-    echo "   Postgres-Datenbank laden $2"
-    echo "   Postgres-Datenbank starten $3"
+    echo "   Assets laden $1"
+    echo "   Postgres Docker Container laden $2"
+    echo "   Postgres Datenbank starten $3"
 }
 
 stty flusho
@@ -34,9 +34,6 @@ done
 
 sleep 2
 
-# Wait for the postgres container to boot up
-# ./wait-for-it.sh -t 0 127.0.0.1:5432
-
 print_status ✅ ✅ ✅
 
 touch /root/environment.ready
@@ -46,6 +43,3 @@ docker exec -it root_postgres_1 psql demo
 \! stty -flusho
 \! tput cnorm
 \! clear
-
-# # stty -flusho
-# stty echo
