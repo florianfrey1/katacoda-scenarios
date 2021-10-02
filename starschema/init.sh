@@ -14,6 +14,7 @@
 # }
 
 function ProgressBar {
+    clear
     let _progress=(${1}*100/${2}*100)/100
     let _done=(${_progress}*4)/10
     let _left=40-$_done
@@ -30,6 +31,7 @@ stty -echo
 # print_status false ❌ ❌ 
 
 {
+    ProgressBar 0 3
     until [ -f ./create-databases.sql ]
     do
         sleep 1
