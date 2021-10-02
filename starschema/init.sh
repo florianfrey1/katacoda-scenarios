@@ -3,8 +3,8 @@
 function print_status {
     clear
     echo "Umgebung wird vorbereitet..."
-    echo "   Dateien $2"
-    echo "   Postgres-Datenbank $3"
+    echo "   Dateien $1"
+    echo "   Postgres-Datenbank $2"
 }
 
 # stty flusho
