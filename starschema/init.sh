@@ -8,7 +8,7 @@ function print_status {
     echo "   Postgres-Datenbank starten $3"
 }
 
-# stty flusho
+stty flusho
 stty -echo
 tput civis
 
@@ -43,8 +43,9 @@ touch /root/environment.ready
 
 docker exec -it root_postgres_1 psql demo
 \! stty echo
+\! stty -flusho
 \! tput cnorm
-\! reset
+\! clear
 
 # # stty -flusho
 # stty echo
