@@ -14,43 +14,28 @@ In Abbildung 1 ist das relationale Schema des Webshops dargestellt.
 
 Nun möchte der Betreiber des Webshops folgende Information abrufen:
 
-> **Eine Liste aller Umsätze pro Artikel in absteigeneder Reihenfolge.**
+> **Eine Liste aller Umsätze pro Kunde in absteigeneder Reihenfolge.**
 
 Die entsprechende Abfrage im OLTP-System sieht wie folgt aus:
 
-<pre class="file" data-filename="app.js" data-target="append">
-SELECT
-    Artikel.bezeichnung,
-    COALESCE(SUM(preis * menge), 0) AS umsatz
-FROM Kunde
-LEFT JOIN Bestellung
-    ON Bestellung.kunde_id = Kunde.id
-LEFT JOIN Position
-    ON Position.bestellung_id = Bestellung.id
-FULL JOIN Artikel
-    ON Artikel.id = Position.artikel_id
-GROUP BY Artikel.id
-ORDER BY umsatz DESC;{{execute}}
-</pre>{{execute}}
-
 `SELECT
-    Artikel.bezeichnung,
+    Kunde.vorname,
     COALESCE(SUM(preis * menge), 0) AS umsatz
 FROM Kunde
 LEFT JOIN Bestellung
     ON Bestellung.kunde_id = Kunde.id
 LEFT JOIN Position
     ON Position.bestellung_id = Bestellung.id
-FULL JOIN Artikel
+LEFT JOIN Artikel
     ON Artikel.id = Position.artikel_id
-GROUP BY Artikel.id
+GROUP BY Kunde.id
 ORDER BY umsatz DESC;`{{execute}}
 
 Folgendes Ergebnis sollte dabei rauskommen:
 
-| bezeichnung  | umsatz |
-| :----------- | -----: |
-| Schaumbad    |  15.80 |
-| Quitscheente |   5.49 |
-| Seife        |   5.40 |
-| Quatsch      |      0 |
+| bezeichnung | umsatz |
+| :---------- | -----: |
+| Paul        |  21.29 |
+| Paula       |   5.40 |
+
+Um dieses Ergebnis zu erhalten, müssen alle Tabellen des Webshops miteinander verbunden werden: Das entspricht drei Joins. Mit steigender Komplexität eines solchen OLTP-Systems nimmt auch die Anzahl an Joins für analytische Anfragen zu. Um die Analyse der Daten effizienter und einfacher zu gestalten, wurde das Starschema entwickelt.
