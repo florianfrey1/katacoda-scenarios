@@ -18,6 +18,16 @@ FULL JOIN Artikel ON Artikel.id = Position.artikel_id
 GROUP BY Artikel.id
 ORDER BY umsatz DESC;`{{execute}}
 
+ `bezeichnung  | umsatz 
+--------------+--------
+ Schaumbad    |  15.80
+ Quitscheente |   5.49
+ Seife        |   5.40
+ Quatsch      |      0`
+
+ ![Simple Shop Database (OLTP)](olap_simple_shop_database.svg)
+<i style="font-size: 80%">Abbildung 1: Dimensionales Schema für ein stark vereinfachtes Data Warehouse des Webshops. Die rote makierte Tabelle ist die Faktentabelle, die grün markierten Tabellen sind die Dimensionstabellen.</i>
+
 `INSERT INTO Verkauf(kunde_id, artikel_id, datum, umsatz, menge)
 SELECT kunde_id, artikel_id, datum, preis * menge AS umsatz, menge FROM Kunde
 LEFT JOIN Bestellung ON Bestellung.kunde_id = Kunde.id

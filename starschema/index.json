@@ -38,6 +38,10 @@
           "target": "/root"
         },
         {
+          "file": "olap_simple_shop_database.svg",
+          "target": "/root"
+        },
+        {
           "file": "create-databases.sql",
           "target": "/root"
         }
