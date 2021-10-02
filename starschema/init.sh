@@ -48,7 +48,7 @@ stty echo
 until docker exec -it root_postgres_1 psql -c "\c demo" &> /dev/null
 do
     echo "waiting for postgres container..."
-    sleep 2
+    sleep 1
 done
 
 echo "READY"
