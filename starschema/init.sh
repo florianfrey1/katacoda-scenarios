@@ -10,6 +10,7 @@ function print_status {
 
 # stty flusho
 stty -echo
+tput civis
 
 print_status ⏳ ⏳ ⏳ 
 
@@ -40,6 +41,7 @@ touch /root/environment.ready
 
 docker exec -it root_postgres_1 psql demo
 \! stty echo
+\! tput cnorm
 \! reset
 
 # # stty -flusho
