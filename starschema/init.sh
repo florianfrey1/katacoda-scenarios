@@ -12,7 +12,7 @@ stty flusho
 stty -echo
 tput civis
 
-print_status ⏳ ⏳ ⏳ &> /dev/null
+print_status ⏳ ⏳ ⏳
 
 {
     until [ -f ./create-databases.sql ] &> /dev/null
@@ -21,11 +21,11 @@ print_status ⏳ ⏳ ⏳ &> /dev/null
     done
 } &> /dev/null
 
-print_status ✅ ⏳ ⏳ &> /dev/null
+print_status ✅ ⏳ ⏳
 
 # Run the postgres database via the docker-compose command
 docker-compose up -d &> /dev/null
-print_status ✅ ✅ ⏳ &> /dev/null
+print_status ✅ ✅ ⏳
 
 until docker exec root_postgres_1 psql -c "\c demo" &> /dev/null
 do
@@ -34,7 +34,7 @@ done
 
 sleep 2
 
-print_status ✅ ✅ ✅ &> /dev/null
+print_status ✅ ✅ ✅
 
 touch /root/environment.ready &> /dev/null
 
