@@ -47,7 +47,7 @@ stty echo
 
 until true
 do
-    docker exec -it root_postgres_1 psql demo \q
+    docker exec -it root_postgres_1 psql demo -w \q
     echo "Waiting for PostgreSQL..."
     sleep 1
 done
