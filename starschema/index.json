@@ -40,11 +40,15 @@
         },
         {
           "file": "oltp_simple_shop_database.svg",
-          "target": "/root"
+          "target": "/root/assets"
         },
         {
           "file": "olap_simple_shop_database.svg",
-          "target": "/root"
+          "target": "/root/assets"
+        },
+        {
+          "file": "Vorlesungsbezug.png",
+          "target": "/root/assets"
         },
         {
           "file": "create-databases.sql",
