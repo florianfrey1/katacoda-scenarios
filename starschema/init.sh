@@ -24,7 +24,7 @@ print_status ⏳ ⏳ ⏳
 print_status ✅ ⏳ ⏳
 
 # Run the postgres database via the docker-compose command
-docker-compose up -d &> /dev/null
+docker-compose up -d -q
 print_status ✅ ✅ ⏳
 
 until docker exec root_postgres_1 psql -c "\c demo" &> /dev/null
@@ -33,8 +33,8 @@ do
 done
 
 sleep 2
-touch /root/environment.ready &> /dev/null
 print_status ✅ ✅ ✅
+touch /root/environment.ready &> /dev/null
 docker exec -it root_postgres_1 psql demo
 \! stty echo
 \! stty -flusho
