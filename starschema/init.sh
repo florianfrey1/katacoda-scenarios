@@ -13,16 +13,21 @@
 #     echo "   Postgres-Datenbank $3"
 # }
 
-function ProgressBar {
-    reset
-    let _progress=(${1}*100/${2}*100)/100
-    let _done=(${_progress}*4)/10
-    let _left=40-$_done
+progress-bar() {
+  local duration=${1}
 
-    _fill=$(printf "%${_done}s")
-    _empty=$(printf "%${_left}s")
 
-    printf "\rProgress : [${_fill// /#}${_empty// /-}]"
+    already_done() { for ((done=0; done<$elapsed; done++)); do printf "▇"; done }
+    remaining() { for ((remain=$elapsed; remain<$duration; remain++)); do printf " "; done }
+    percentage() { printf "| %s%%" $(( (($elapsed)*100)/($duration)*100/100 )); }
+    clean_line() { printf "\r"; }
+
+  for (( elapsed=1; elapsed<=$duration; elapsed++ )); do
+      already_done; remaining; percentage
+      sleep 1
+      clean_line
+  done
+  clean_line
 }
 
 # stty flusho
@@ -31,25 +36,25 @@ stty -echo
 # print_status false ❌ ❌ 
 
 {
-    ProgressBar 0 3
+    progress-bar 20
     until [ -f ./create-databases.sql ]
     do
         sleep 1
     done
-    ProgressBar 1 3
+    progress-bar 40
 } &> /dev/null
 
 # print_status false ✅ ❌ 
 
 # Run the postgres database via the docker-compose command
 docker-compose up -d &> /dev/null
-ProgressBar 2 3
+progress-bar 80
 
 until docker exec root_postgres_1 psql -c "\c demo" &> /dev/null
 do
     sleep 1
 done
-ProgressBar 3 3
+progress-bar 100
 
 # Wait for the postgres container to boot up
 # ./wait-for-it.sh -t 0 127.0.0.1:5432
