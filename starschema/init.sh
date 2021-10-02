@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function print_status {
-    reset
+    clear
     echo "Umgebung wird vorbereitet..."
     echo "   Assets laden $1"
     echo "   Postgres Docker Container laden $2"
@@ -29,7 +29,7 @@ print_status ✅ ✅ ⏳
 
 until docker exec root_postgres_1 psql -c "\c demo" &> /dev/null
 do
-    sleep 1
+    sleep 1 &> /dev/null
 done
 
 sleep 2
@@ -38,7 +38,7 @@ print_status ✅ ✅ ✅
 
 touch /root/environment.ready &> /dev/null
 
-docker exec -it root_postgres_1 psql demo
+docker exec -it root_postgres_1 psql demo &> /dev/null
 \! stty echo
 \! stty -flusho
 \! tput cnorm
