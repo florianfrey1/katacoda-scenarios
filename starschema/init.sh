@@ -45,7 +45,7 @@ stty echo
 # until docker exec root_postgres_1 pg_isready ; do sleep 5 ; done
 # echo  "pg is ready"
 
-until true
+until [ 1 ]
 do
     docker exec -it root_postgres_1 psql demo -w \q
     echo "Waiting for PostgreSQL..."
