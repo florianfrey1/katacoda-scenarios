@@ -2,7 +2,7 @@ Konvertierung:
 
 > Liste aller Umsätze pro Artikel in absteigeneder Reihenfolge.
 
-![Simple Shop Database (OLTP)](oltp_simple_shop_database.png)
+![Simple Shop Database (OLTP)](oltp_simple_shop_database.svg)
 
 Select Artikel.bezeichnung, COALESCE(sum(preis * menge), 0) as umsatz from Kunde
 LEFT JOIN Bestellung on Bestellung.kunde_id = Kunde.id
