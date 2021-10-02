@@ -29,7 +29,7 @@ print_status false ✅ ❌
 
 # {
     # Run the postgres database via the docker-compose command
-    docker-compose up
+    docker-compose up -d
 
     # until docker exec -it root_postgres_1 psql -c "\c demo" &> /dev/null
     # do
