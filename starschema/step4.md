@@ -1,5 +1,5 @@
 ___
-# OLAP-System
+# Starschema
 
  ![Simple Shop Database (OLTP)](olap_simple_shop_database.svg)
 <i style="font-size: 80%">Abbildung 1: Dimensionales Schema für ein stark vereinfachtes Data Warehouse des Webshops. Die rote makierte Tabelle ist die Faktentabelle, die grün markierten Tabellen sind die Dimensionstabellen.</i>

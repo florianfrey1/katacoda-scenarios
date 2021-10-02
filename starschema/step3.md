@@ -1,5 +1,5 @@
 ___
-# OLTP-System
+# Relationales Schema
 Am Beispiel eines einfachen Webshops soll der Unterschied zwischen einem relationalen OLTP- und einem dimensionalen OLAP-System praktisch gezeigt werden.
 
 ![Simple Shop Database (OLTP)](oltp_simple_shop_database.svg)
@@ -30,8 +30,8 @@ LEFT JOIN Position
 FULL JOIN Artikel
     ON Artikel.id = Position.artikel_id
 GROUP BY Artikel.id
-ORDER BY umsatz DESC;
-</pre>
+ORDER BY umsatz DESC;{{execute}}
+</pre>{{execute}}
 
 `SELECT
     Artikel.bezeichnung,
