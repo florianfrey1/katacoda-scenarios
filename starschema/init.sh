@@ -42,4 +42,5 @@ touch /root/environment.ready
 stty -flusho
 stty echo
 
-docker exec -it root_postgres_1 psql demo
+docker ps
+# docker exec -it root_postgres_1 psql demo
