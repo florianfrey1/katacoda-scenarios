@@ -1,5 +1,5 @@
 {
-  "title": "Starschema",
+  "title": "Sternschema",
   "description": "",
   "difficulty": "Beginner",
   "time": "10 minutes",
@@ -13,7 +13,7 @@
         "verify": "verify-step1.sh"
       },
       {
-        "title": "Sternschema",
+        "title": "Theorie",
         "text": "step2.md"
       },
       {
@@ -52,6 +52,10 @@
         },
         {
           "file": "data_cube.png",
+          "target": "/root/assets"
+        },
+        {
+          "file": "star_schema.png",
           "target": "/root/assets"
         },
         {

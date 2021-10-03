@@ -1,10 +1,23 @@
-In einem Data Warehouse müssen Anfragen auf große Datenmengen effizient ausgeführt werden können.
-Dabei liegt der Fokus vorwiegend auf dem Lesen und nicht dem Schreiben der Daten.
-Dafür eignet sich das sogenannte Sternschema (star schema) besonders gut. [Vavouras2000]
+
+Das Sternschema ist ein Datenbankmodell für Data Warehouses. Es ist in der Lage Anfragen auf große Datenmengen effizient auszuführen [Vavouras2000].
+
+# Aufbau
+
+Bei dem Sternschema gibt es eine zentrale Faktentabelle, die von mehreren Dimensionstabellen umgeben ist. 
+
+Das Sternschema hat seine Bezeichnung von der sternförmigen Anordnung vieler Entitäten um eine zentrale Entität. Die zentrale Entität wird als Faktentabelle und die äußeren Entitäten als Dimensionstabellen bezeichnet. Die Faktentabelle enthält sogenannte Geschäftsereignisse, wie beispielsweise Verkaufstransaktionen oder Anmeldung von Kunden. [Corral2006]
+
+<img src="assets/star_schema.png" alt="OLAP Data Cube Beispiel" style="max-width: 300px; display: block">
+<i style="font-size: 80%">Abbildung 1: Beispiel eines OLAP-Datenwürfels.</i>
+
+# 
+
+Dabei liegt der Fokus vorwiegend auf dem Lesen und nicht dem Schreiben der Daten. [Vavouras2000]
 
 Das Sternschema hat seine Bezeichnung von der sternförmigen Anordnung vieler Entitäten um eine zentrale Entität. Die zentrale Entität wird als Faktentabelle und die äußeren Entitäten als Dimensionstabellen bezeichnet. Die Faktentabelle enthält sogenannte Geschäftsereignisse, wie beispielsweise Verkaufstransaktionen oder Anmeldung von Kunden. [Corral2006] Die Dimensionstabellen ergänzen die Faktentabellen mit beschreibenden Informationen.
 
-![OLAP Data Cube Beispiel](assets/data_cube.png)
+<img src="assets/data_cube.png" alt="OLAP Data Cube Beispiel" style="max-width: 300px; display: block">
+<i style="font-size: 80%">Abbildung 2: Beispiel eines OLAP-Datenwürfels.</i>
 
 OLAP ist die Abkürzung für Online Analytical Processing und stellt die Softwarekategorie zur Datenanalyse dar.
 
