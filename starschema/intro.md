@@ -4,4 +4,4 @@ In dieser Katakoda wird das Star-Schema anhand eines einfachen Beispiels praktis
 
 **Referenz zur Vorlesung!**
 
-![Vorlesungsbezug](./assets/Vorlesungsbezug.png)
+<img src="assets/Vorlesungsbezug.png" alt="OLAP Data Cube Beispiel" style="max-width: 350px; display: block">

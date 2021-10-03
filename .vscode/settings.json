@@ -1,8 +1,12 @@
 {
     "cSpell.enabled": true,
     "cSpell.words": [
+        "Datawarehouse",
+        "Datawarehouses",
         "OLAP",
         "OLTP",
-        "Starschema"
+        "redundanzfrei",
+        "Starschema",
+        "unperformant"
     ]
 }
