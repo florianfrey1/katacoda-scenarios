@@ -7,7 +7,8 @@ Am Beispiel eines einfachen Webshops soll der Unterschied zwischen einem relatio
 </div>
 
 # Relationales Schema
-![Simple Shop Database (OLTP)](./assets/oltp_simple_shop_database.svg)
+
+<img src="assets/oltp_simple_shop_database.svg" alt="OLAP Data Cube Beispiel" style="max-width: 350px; display: block">
 <i style="font-size: 80%">Abbildung 1: Relationales Schema eines einfachen Webshops</i>
 
 In Abbildung 1 ist das relationale Schema des Webshops dargestellt. 
