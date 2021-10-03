@@ -34,7 +34,7 @@ INSERT INTO Kunde (vorname, nachname) VALUES
 INSERT INTO Bestellung (kunde_id, datum) VALUES
     (1, '2020-12-10 08:33:12'),
     (2, '2021-04-17 19:28:46'),
-    (1, '2020-10-05 14:06:37');
+    (1, '2021-10-05 14:06:37');
 
 INSERT INTO Artikel (bezeichnung, preis) VALUES
     ('Schaumbad', 3.95),

@@ -16,10 +16,14 @@ Abfragen:
 
 `SELECT Kunde.vorname, COALESCE(SUM(umsatz), 0) AS umsatz FROM Verkauf
 FULL JOIN Kunde on Kunde.id = Verkauf.kunde_id
+WHERE EXTRACT(year FROM datum) = 2021
 GROUP BY Kunde.id
 ORDER BY umsatz DESC;`{{execute}}
 
 `SELECT Artikel.bezeichnung, COALESCE(SUM(umsatz), 0) AS umsatz FROM Verkauf
 FULL JOIN Artikel on Artikel.id = Verkauf.artikel_id
+WHERE EXTRACT(year FROM datum) = 2021
 GROUP BY Artikel.id
 ORDER BY umsatz DESC;`{{execute}}
+
+`CREATE VIEW name AS query`{{execute}}

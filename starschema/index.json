@@ -51,6 +51,10 @@
           "target": "/root/assets"
         },
         {
+          "file": "data_cube.png",
+          "target": "/root/assets"
+        },
+        {
           "file": "create-databases.sql",
           "target": "/root"
         }
