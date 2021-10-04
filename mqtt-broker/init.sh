@@ -15,3 +15,5 @@ docker-compose up -d
 # Create an environment.ready file. This file is used to check
 # if the initialization process is completed.
 touch /root/environment.ready
+
+npm install mqtt --save

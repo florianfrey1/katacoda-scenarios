@@ -20,6 +20,10 @@
     "assets": {
       "host01": [
         {
+          "file": "project/test.js",
+          "target": "/root/project"
+        },
+        {
           "file": "mosquitto.conf",
           "target": "/root"
         },
@@ -31,9 +35,12 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "vscode-terminal-split"
   },
   "backend": {
     "imageid": "ubuntu:2004"
-  }
+  },
+  "files": [
+    "project/test.js"
+  ]
 }
