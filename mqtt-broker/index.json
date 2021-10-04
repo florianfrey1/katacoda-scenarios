@@ -13,7 +13,7 @@
         "verify": "verify.init.sh"
       },
       {
-        "title": "MQTT-Broker testen",
+        "title": "Erste Schritte",
         "text": "step2.md"
       }
     ],
