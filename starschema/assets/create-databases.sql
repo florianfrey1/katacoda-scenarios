@@ -29,12 +29,14 @@ CREATE TABLE IF NOT EXISTS Position (
 
 INSERT INTO Kunde (vorname, nachname) VALUES
     ('Paul', 'Müller'),
-    ('Paula', 'Schmidt');
+    ('Paula', 'Schmidt'),
+    ('Peter', 'Huber');
 
 INSERT INTO Bestellung (kunde_id, datum) VALUES
     (1, '2020-12-10 08:33:12'),
     (2, '2021-04-17 19:28:46'),
-    (1, '2021-10-05 14:06:37');
+    (1, '2021-10-05 14:06:37'),
+    (2, '2021-11-15 11:13:05');
 
 INSERT INTO Artikel (bezeichnung, preis) VALUES
     ('Schaumbad', 3.95),
@@ -46,7 +48,9 @@ INSERT INTO Position (bestellung_id, artikel_id, menge) VALUES
     (1, 1, 2),
     (1, 3, 1),
     (2, 2, 4),
-    (3, 1, 2);
+    (3, 1, 2),
+    (4, 3, 1),
+    (4, 1, 2);
 
 CREATE TABLE IF NOT EXISTS Verkauf (
     id SERIAL PRIMARY KEY,
@@ -56,9 +60,3 @@ CREATE TABLE IF NOT EXISTS Verkauf (
     umsatz NUMERIC(5, 2) NOT NULL CHECK(umsatz >= 0),
     menge INTEGER CHECK(menge > 0) DEFAULT 1
 );
-
--- INSERT INTO Verkauf (kunde_id, artikel_id, datum, umsatz, menge) VALUES
---     (1, 1, '2020-12-10 08:33:12', 7.90, 2),
---     (1, 3, '2020-12-10 08:33:12', 5.49, 1),
---     (2, 2, '2021-04-17 19:28:46', 5.40, 4),
---     (1, 1, '2020-10-05 14:06:37', 7.90, 2);

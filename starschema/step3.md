@@ -11,7 +11,7 @@ Am Beispiel eines einfachen Webshops soll der Unterschied zwischen einem relatio
 <img src="assets/oltp_simple_shop_database.svg" alt="OLAP Data Cube Beispiel" style="max-width: 450px; display: block">
 <i style="font-size: 80%">Abbildung 3: Relationales Schema eines einfachen Webshops</i>
 
-In _Abbildung 3_ ist das normalisierte, relationale Schema des Webshops dargestellt. 
+In _Abbildung 3_ ist das normalisierte, relationale Schema eines einfachen Webshops dargestellt. 
 
 Der Betreiber des Webshops möchte nun folgende Information abrufen:
 
@@ -73,6 +73,4 @@ WHERE EXTRACT(year FROM datum) = 2021
 GROUP BY Kunde.id
 ORDER BY umsatz DESC;`{{execute}}
 
-Es ist nur noch ein Join mit der Dimensionstabelle Kunde nötig. Zudem entfällt die Berechnung des Umsatzes.
-
-<!-- `CREATE VIEW name AS query`{{execute}} -->
+Es ist im Vergleich zum OLTP-System nur noch ein Join mit der Dimensionstabelle Kunde nötig. Zudem entfällt die Berechnung des Umsatzes. Insgesamt ist diese analytische Abfrage im Datawarehouse effizienter in der Ausführung und intuitiv verständlicher für Anwender.
