@@ -2,10 +2,10 @@
 
 # Wait for all assets to be loaded. The last asset is
 # the create-databases.sql file.
-until [ -f ./project/test.js ] &> /dev/null
-do
-    sleep 1 &> /dev/null
-done
+# until [ -f ./project/test.js ] &> /dev/null
+# do
+#     sleep 1 &> /dev/null
+# done
 
 touch /root/assets.ready
 
