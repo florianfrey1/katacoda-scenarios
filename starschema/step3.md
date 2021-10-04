@@ -13,10 +13,8 @@ Am Beispiel eines einfachen Webshops soll der Unterschied zwischen einem relatio
 
 In _Abbildung 3_ ist das normalisierte, relationale Schema eines einfachen Webshops dargestellt. 
 
-Der Betreiber des Webshops möchte nun folgende Information abrufen:
-
-> **Eine Liste aller Umsätze nach Kunde für das Jahr 2021.**
-
+Der Betreiber des Webshops möchte nun wissen, welche seine treusten Kunden im Jahr 2021 waren.
+Dafür benötigt er eine **Liste der summierten Umsätze pro Kunde für das Jahr 2021**.
 Die entsprechende Abfrage im OLTP-System sieht wie folgt aus:
 
 `SELECT
@@ -37,15 +35,16 @@ Folgendes Ergebnis sollte dabei rauskommen:
 
 | bezeichnung | umsatz |
 | :---------- | -----: |
-| Paul        |   7.90 |
-| Paula       |   5.40 |
+| Paula       |  18.79 |
+| Paul        |  11.85 |
+| Peter       |      0 |
 
 Um dieses Ergebnis zu erhalten, müssen alle Tabellen des Webshops miteinander verbunden werden: Dafür sind drei Joins notwendig.
 Mit steigender Komplexität eines solchen OLTP-Systems nimmt auch die Anzahl an Joins für analytische Abfragen zu. 
 
 # Sternschema
 
-Mit dem Sternschema kann die Analyse der Daten effizienter und einfacher durchgeführt werden.
+Mit dem Sternschema kann die Analyse der Daten effizienter und intuitiver durchgeführt werden.
 In _Abbildung 4_ ist ein vereinfachtes Sternschema für das Beispiel des Webshops abgebildet.
 Die rot markierte Tabelle ist die Faktentabelle mit den Umsätzen der verkauften Artikel und die grün markierten Tabellen sind die Dimensionstabellen.
 Die Dimensionstabellen entsprechen in diesem Fall eins zu eins den Tabellen aus dem OLTP-System.
@@ -61,11 +60,11 @@ RIGHT JOIN Bestellung ON Bestellung.kunde_id = Kunde.id
 LEFT JOIN Position ON Position.bestellung_id = Bestellung.id
 LEFT JOIN Artikel ON Artikel.id = Position.artikel_id;`{{execute}}
 
-Die Faktentabelle des Datawarehouses sollte nun 4 Einträge haben.
+Die Faktentabelle des Datawarehouses sollte nun sechs Einträge beinhalten:
 
 `SELECT * FROM Verkauf;`{{execute}}
 
-Die Abfrage **aller Umsätze nach Kunde für das Jahr 2021** sieht im Datawarehouse jetzt wie folgt aus:
+Die Abfrage **der summierten Umsätze pro Kunde für das Jahr 2021** sieht im Datawarehouse jetzt wie folgt aus:
 
 `SELECT Kunde.vorname, COALESCE(SUM(umsatz), 0) AS umsatz FROM Verkauf
 FULL JOIN Kunde on Kunde.id = Verkauf.kunde_id
