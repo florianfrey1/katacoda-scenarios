@@ -57,7 +57,7 @@ Der folgende SQL-Befehl holt die entsprechenden Daten aus dem fiktiven OLTP-Syst
 
 `INSERT INTO Verkauf(kunde_id, artikel_id, datum, umsatz, menge)
 SELECT kunde_id, artikel_id, datum, preis * menge AS umsatz, menge FROM Kunde
-LEFT JOIN Bestellung ON Bestellung.kunde_id = Kunde.id
+RIGHT JOIN Bestellung ON Bestellung.kunde_id = Kunde.id
 LEFT JOIN Position ON Position.bestellung_id = Bestellung.id
 LEFT JOIN Artikel ON Artikel.id = Position.artikel_id;`{{execute}}
 
