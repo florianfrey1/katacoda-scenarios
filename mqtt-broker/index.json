@@ -25,10 +25,6 @@
     },
     "assets": {
       "host01": [
-        {
-          "file": "project/test.js",
-          "target": "/root/project"
-        }
       ]
     }
   },
