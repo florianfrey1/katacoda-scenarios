@@ -1,5 +1,5 @@
 var mqtt = require('mqtt')
-var client  = mqtt.connect('mqtt://test.mosquitto.org')
+var client  = mqtt.connect('mqtt://127.0.0.1:1883')
 
 client.on('connect', function () {
   console.log('connected...')
@@ -7,12 +7,12 @@ client.on('connect', function () {
   client.subscribe('hi', function (err) {
     if (!err) {
       client.publish('hi', 'Hello mqtt')
+      client.publish('hi', 'huhu')
     }
   })
 })
 
 client.on('message', function (topic, message) {
-  // message is Buffer
   console.log(topic, message.toString())
   client.end()
 })

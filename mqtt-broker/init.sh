@@ -10,7 +10,7 @@ done
 touch /root/init.assets.loaded
 
 # Run the postgres database via the docker-compose command
-docker-compose up -d
+docker run -d -p 1883:1883 hivemq/hivemq4
 
 # Create an environment.ready file. This file is used to check
 # if the initialization process is completed.
