@@ -3,7 +3,7 @@ Am Beispiel eines einfachen Webshops soll der Unterschied zwischen einem relatio
 
 <div style="background: #ffb829; width: 100%; border-radius: 3px; box-sizing: border-box; padding: 20px; margin: 20px 0; color: black">
     <div style="position: relative; font-size: 110%; font-weight: bold">⚠ Vereinfachung</div>
-    <p>Zur Vereinfachung dieses Beispiels werden beide Systeme gemeinsam in einer Datenbank abgebildet. In der Praxis werden dafür aber mehrere Datenbanken verwendet.</p>
+    <p>Zur Vereinfachung dieses Beispiels werden beide Systeme gemeinsam in einer Datenbank abgebildet. In der Praxis werden dafür unterschiedliche Datenbanken verwendet.</p>
 </div>
 
 # Relationales Schema
