@@ -6,15 +6,8 @@
   "details": {
     "steps": [
       {
-        "title": "Theorie",
+        "title": "MQTT-Broker",
         "text": "step1.md"
-      },
-      {
-        "title": "Umgebung",
-        "text": "step2.md",
-        "code": "monitor-init.sh",
-        "courseData": "init.sh",
-        "verify": "verify-step1.sh"
       }
     ],
     "intro": {
