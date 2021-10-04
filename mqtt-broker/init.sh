@@ -13,10 +13,14 @@ touch /root/assets.ready
 docker run --name hivemq-ce -d -p 1883:1883 hivemq/hivemq-ce:snapshot
 touch /root/hivemq.ready
 
+# Install PM2.
+npm i pm2@latest --g
+touch /root/pm2.ready
+
 # Initialize the project
 cd project
 npm init -y
-npm i mqtt --save
+npm i mqtt@latest --save
 
 touch /root/project.ready
 

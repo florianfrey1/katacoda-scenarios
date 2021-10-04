@@ -6,6 +6,7 @@ function print_status {
     echo "Umgebung wird vorbereitet..."
     echo "   Assets laden $1"
     echo "   HiveMQ-CE Docker Container starten $2"
+    echo "   PM2 installieren $2"
     echo "   Project initialisieren $3"
 }
 
@@ -24,13 +25,15 @@ stty flusho
 stty -echo
 tput civis
 
-print_status ⏳ ⏳ ⏳
+print_status ⏳ ⏳ ⏳ ⏳
 wait_for ./assets.ready
-print_status ✅ ⏳ ⏳
+print_status ✅ ⏳ ⏳ ⏳
 wait_for ./hivemq.ready
-print_status ✅ ✅ ⏳
+print_status ✅ ✅ ⏳ ⏳
+wait_for ./pm2.ready
+print_status ✅ ✅ ✅ ⏳
 wait_for ./project.ready
-print_status ✅ ✅ ✅
+print_status ✅ ✅ ✅ ✅
 
 # Switch to the project folder.
 cd project
