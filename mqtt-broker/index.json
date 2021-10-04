@@ -23,14 +23,6 @@
         {
           "file": "project/test.js",
           "target": "/root/project"
-        },
-        {
-          "file": "mosquitto.conf",
-          "target": "/root"
-        },
-        {
-          "file": "docker-compose.yml",
-          "target": "/root"
         }
       ]
     }
