@@ -8,8 +8,9 @@
       {
         "title": "Umgebung",
         "text": "step1.md",
-        "code": "monitor.init.sh",
-        "courseData": "init.sh"
+        "foreground": "monitor.init.sh",
+        "background": "init.sh",
+        "verify": "verify.init.sh"
       },
       {
         "title": "MQTT-Broker testen",
