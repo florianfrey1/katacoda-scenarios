@@ -5,8 +5,8 @@ function print_status {
     clear
     echo "Umgebung wird vorbereitet..."
     echo "   Assets laden $1"
-    echo "   Postgres Docker Container laden $2"
-    echo "   Postgres Datenbank starten $3"
+    echo "   HiveMQ-CE Docker Container starten $2"
+    echo "   Project initialisieren $3"
 }
 
 function wait_for {
@@ -25,18 +25,15 @@ stty -echo
 tput civis
 
 print_status ⏳ ⏳ ⏳
-wait_for ./init.assets.loaded
+wait_for ./assets.ready
 print_status ✅ ⏳ ⏳
-wait_for ./init.docker.container.loaded
+wait_for ./hivemq.ready
 print_status ✅ ✅ ⏳
-wait_for ./init.postgres.started
+wait_for ./project.ready
 print_status ✅ ✅ ✅
 
-# Start the postgres command line for the demo database.
-docker exec -it root_postgres_1 psql demo
-
-# Reset all console settings from inside the postgres command line.
-\! stty echo
-\! stty -flusho
-\! tput cnorm
-\! clear
+# Reset all console settings.
+stty echo
+stty -flusho
+tput cnorm
+clear
