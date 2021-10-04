@@ -29,7 +29,7 @@ LEFT JOIN Position
     ON Position.bestellung_id = Bestellung.id
 LEFT JOIN Artikel
     ON Artikel.id = Position.artikel_id
-WHERE EXTRACT(year FROM datum) = 2021
+WHERE EXTRACT(year FROM datum) = 2021 OR datum IS NULL
 GROUP BY Kunde.id
 ORDER BY umsatz DESC;`{{execute}}
 
@@ -69,7 +69,7 @@ Die Abfrage **aller Umsätze nach Kunde für das Jahr 2021** sieht im Datawareho
 
 `SELECT Kunde.vorname, COALESCE(SUM(umsatz), 0) AS umsatz FROM Verkauf
 FULL JOIN Kunde on Kunde.id = Verkauf.kunde_id
-WHERE EXTRACT(year FROM datum) = 2021
+WHERE EXTRACT(year FROM datum) = 2021 OR datum IS NULL
 GROUP BY Kunde.id
 ORDER BY umsatz DESC;`{{execute}}
 
