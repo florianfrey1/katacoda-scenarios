@@ -18,6 +18,10 @@
     },
     "assets": {
       "host01": [
+        {
+          "file": "mosquitto.conf",
+          "target": "/root"
+        }
       ]
     }
   },

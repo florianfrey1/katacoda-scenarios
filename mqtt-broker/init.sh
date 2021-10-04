@@ -10,7 +10,7 @@
 # touch /root/init.assets.loaded
 
 # Run the postgres database via the docker-compose command
-docker run -it --name mosquitto -p 1883:1883 eclipse-mosquitto
+docker-compose up -d
 
 # Create an environment.ready file. This file is used to check
 # if the initialization process is completed.
