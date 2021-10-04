@@ -34,7 +34,8 @@
   "environment": {
     "uilayout": "vscode-terminal-split",
     "uisettings": "javascript",
-    "uieditorpath": "/root/project"
+    "uieditorpath": "/root/project",
+    "showvisualise": true
   },
   "backend": {
     "imageid": "ubuntu:2004"
