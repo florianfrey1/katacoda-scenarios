@@ -6,10 +6,14 @@
   "details": {
     "steps": [
       {
-        "title": "MQTT-Broker",
+        "title": "Umgebung",
         "text": "step1.md",
         "code": "monitor.init.sh",
         "courseData": "init.sh"
+      },
+      {
+        "title": "MQTT-Broker testen",
+        "text": "step2.md"
       }
     ],
     "intro": {
