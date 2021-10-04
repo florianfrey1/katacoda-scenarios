@@ -32,6 +32,9 @@ print_status ✅ ✅ ⏳
 wait_for ./project.ready
 print_status ✅ ✅ ✅
 
+# Switch to the project folder.
+cd project
+
 # Reset all console settings.
 stty echo
 stty -flusho
