@@ -7,7 +7,8 @@
     "steps": [
       {
         "title": "MQTT-Broker",
-        "text": "step1.md"
+        "text": "step1.md",
+        "code": "init.sh"
       }
     ],
     "intro": {
@@ -20,6 +21,10 @@
       "host01": [
         {
           "file": "mosquitto.conf",
+          "target": "/root"
+        },
+        {
+          "file": "docker-compose.yml",
           "target": "/root"
         }
       ]
