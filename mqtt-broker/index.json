@@ -32,12 +32,13 @@
     }
   },
   "environment": {
-    "uilayout": "vscode-terminal-split"
+    "uilayout": "vscode-terminal-split",
+    "uisettings": "javascript",
+    "uieditorpath": "/root/project"
   },
   "backend": {
     "imageid": "ubuntu:2004"
   },
   "files": [
-    "project/test.js"
   ]
 }

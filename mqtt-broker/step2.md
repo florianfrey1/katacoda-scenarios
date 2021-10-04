@@ -18,4 +18,4 @@
     })
 </pre>
 
-`node test-mqtt-broker.js`
+`node test-mqtt-broker.js`{{execute}}
