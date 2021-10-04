@@ -16,4 +16,5 @@ docker-compose up -d
 # if the initialization process is completed.
 touch /root/environment.ready
 
-npm install mqtt --save
+cd project
+npm i mqtt --save
