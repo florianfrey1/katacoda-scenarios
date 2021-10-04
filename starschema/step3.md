@@ -9,13 +9,13 @@ Am Beispiel eines einfachen Webshops soll der Unterschied zwischen einem relatio
 # Relationales Schema
 
 <img src="assets/oltp_simple_shop_database.svg" alt="OLAP Data Cube Beispiel" style="max-width: 450px; display: block">
-<i style="font-size: 80%">Abbildung 1: Relationales Schema eines einfachen Webshops</i>
+<i style="font-size: 80%">Abbildung 3: Relationales Schema eines einfachen Webshops</i>
 
-In Abbildung 1 ist das relationale Schema des Webshops dargestellt. 
+In _Abbildung 3_ ist das normalisierte, relationale Schema des Webshops dargestellt. 
 
-Nun möchte der Betreiber des Webshops folgende Information abrufen:
+Der Betreiber des Webshops möchte nun folgende Information abrufen:
 
-> **Eine Liste aller Umsätze nach Kunde für das Jahr 2021 in absteigender Reihenfolge.**
+> **Eine Liste aller Umsätze nach Kunde für das Jahr 2021.**
 
 Die entsprechende Abfrage im OLTP-System sieht wie folgt aus:
 
@@ -40,4 +40,47 @@ Folgendes Ergebnis sollte dabei rauskommen:
 | Paul        |   7.90 |
 | Paula       |   5.40 |
 
-Um dieses Ergebnis zu erhalten, müssen alle Tabellen des Webshops miteinander verbunden werden: Das entspricht drei Joins. Mit steigender Komplexität eines solchen OLTP-Systems nimmt auch die Anzahl an Joins für analytische Anfragen zu. Um die Analyse der Daten effizienter und einfacher zu gestalten, wurde das Starschema entwickelt.
+Um dieses Ergebnis zu erhalten, müssen alle Tabellen des Webshops miteinander verbunden werden: Dafür sind drei Joins notwendig.
+Mit steigender Komplexität eines solchen OLTP-Systems nimmt auch die Anzahl an Joins für analytische Abfragen zu. 
+
+# Sternschema
+
+Mit dem Sternschema kann die Analyse der Daten effizienter und einfacher durchgeführt werden.
+In _Abbildung 4_ ist ein vereinfachtes Sternschema für das Beispiel des Webshops abgebildet.
+Die rot markierte Tabelle ist die Faktentabelle mit den Umsätzen der verkauften Artikel und die grün markierten Tabellen sind die Dimensionstabellen.
+Die Dimensionstabellen entsprechen in diesem Fall eins zu eins den Tabellen aus dem OLTP-System.
+
+ <img src="assets/olap_simple_shop_database.svg" alt="OLAP Data Cube Beispiel" style="max-width: 450px; display: block">
+<i style="font-size: 80%">Abbildung 4: Dimensionales Sternschema für ein vereinfachten Data Warehouses des Webshops. Die rot markierte Tabelle ist die Faktentabelle, die grün markierten Tabellen sind die Dimensionstabellen.</i>
+
+Der folgende SQL-Befehl holt die entsprechenden Daten aus dem fiktiven OLTP-System des Webshops und schreibt sie in das nach dem Sternschema definierte Datawarehouse.
+
+`INSERT INTO Verkauf(kunde_id, artikel_id, datum, umsatz, menge)
+SELECT kunde_id, artikel_id, datum, preis * menge AS umsatz, menge FROM Kunde
+LEFT JOIN Bestellung ON Bestellung.kunde_id = Kunde.id
+LEFT JOIN Position ON Position.bestellung_id = Bestellung.id
+LEFT JOIN Artikel ON Artikel.id = Position.artikel_id;`{{execute}}
+
+Jetzt sind folgende Daten im Datawarehouse enthalten.
+
+`SELECT * FROM Verkauf
+NATURAL JOIN Kunde
+NATURAL JOIN Artikel;`{{execute}}
+
+---
+
+Abfragen:
+
+`SELECT Kunde.vorname, COALESCE(SUM(umsatz), 0) AS umsatz FROM Verkauf
+FULL JOIN Kunde on Kunde.id = Verkauf.kunde_id
+WHERE EXTRACT(year FROM datum) = 2021
+GROUP BY Kunde.id
+ORDER BY umsatz DESC;`{{execute}}
+
+`SELECT Artikel.bezeichnung, COALESCE(SUM(umsatz), 0) AS umsatz FROM Verkauf
+FULL JOIN Artikel on Artikel.id = Verkauf.artikel_id
+WHERE EXTRACT(year FROM datum) = 2021
+GROUP BY Artikel.id
+ORDER BY umsatz DESC;`{{execute}}
+
+`CREATE VIEW name AS query`{{execute}}
