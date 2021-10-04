@@ -31,7 +31,12 @@ WHERE EXTRACT(year FROM datum) = 2021 OR datum IS NULL
 GROUP BY Kunde.id
 ORDER BY umsatz DESC;`{{execute}}
 
-Folgendes Ergebnis sollte dabei rauskommen:
+<div style="background: #29bfff; width: 100%; border-radius: 3px; box-sizing: border-box; padding: 20px; margin: 20px 0; color: black">
+    <div style="position: relative; font-size: 110%; font-weight: bold">🛈 Coalesce-Funktion in Postgres</div>
+    <p>Die Coalesce-Funktion in Postgres gibt das erste Argument, das nicht NULL ist, zurück. Dadurch können NULL-Werte in Abfragen beispielsweise durch Default-Werte ersetzt werden.</p>
+</div>
+
+Folgendes Ergebnis sollte bei der Abfrage heraus kommen:
 
 | vorname | umsatz |
 | :------ | -----: |
@@ -40,7 +45,8 @@ Folgendes Ergebnis sollte dabei rauskommen:
 | Peter   |      0 |
 
 Um dieses Ergebnis zu erhalten, müssen alle Tabellen des Webshops miteinander verbunden werden: Dafür sind drei Joins notwendig.
-Mit steigender Komplexität eines solchen OLTP-Systems nimmt auch die Anzahl an Joins für analytische Abfragen zu. 
+Mit steigender Komplexität eines solchen OLTP-Systems nimmt auch die Anzahl an Joins für analytische Abfragen zu.
+Für diese Abfrage muss zudem für jede Position der Umsatz aus Preis und Menge berechnet werden.
 
 # Sternschema
 

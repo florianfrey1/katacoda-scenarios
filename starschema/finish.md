@@ -1,3 +1,5 @@
+In dieser Katacoda wurden die wesentlichen Eigenschaften des Sternschemas erklärt und anhand eines praktischen Beispiels erläutert.
+
 # Quellen
 
 [1] Vavouras, A., & Gatziu, S. (2000). Modeling and Maintaining Histories in Data Warehouses. Information Als Erfolgsfaktor, 113–122. https://doi.org/10.1007/978-3-322-84796-6_10 <br>
