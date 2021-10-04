@@ -61,15 +61,11 @@ LEFT JOIN Bestellung ON Bestellung.kunde_id = Kunde.id
 LEFT JOIN Position ON Position.bestellung_id = Bestellung.id
 LEFT JOIN Artikel ON Artikel.id = Position.artikel_id;`{{execute}}
 
-Jetzt sind folgende Daten im Datawarehouse enthalten.
+Die Faktentabelle des Datawarehouses sollte nun 4 Einträge haben.
 
-`SELECT * FROM Verkauf
-NATURAL JOIN Kunde
-NATURAL JOIN Artikel;`{{execute}}
+`SELECT * FROM Verkauf;`{{execute}}
 
----
-
-Abfragen:
+Die Abfrage **aller Umsätze nach Kunde für das Jahr 2021** sieht im Datawarehouse jetzt wie folgt aus:
 
 `SELECT Kunde.vorname, COALESCE(SUM(umsatz), 0) AS umsatz FROM Verkauf
 FULL JOIN Kunde on Kunde.id = Verkauf.kunde_id
@@ -77,10 +73,6 @@ WHERE EXTRACT(year FROM datum) = 2021
 GROUP BY Kunde.id
 ORDER BY umsatz DESC;`{{execute}}
 
-`SELECT Artikel.bezeichnung, COALESCE(SUM(umsatz), 0) AS umsatz FROM Verkauf
-FULL JOIN Artikel on Artikel.id = Verkauf.artikel_id
-WHERE EXTRACT(year FROM datum) = 2021
-GROUP BY Artikel.id
-ORDER BY umsatz DESC;`{{execute}}
+Es ist nur noch ein Join mit der Dimensionstabelle Kunde nötig. Zudem entfällt die Berechnung des Umsatzes.
 
-`CREATE VIEW name AS query`{{execute}}
+<!-- `CREATE VIEW name AS query`{{execute}} -->
