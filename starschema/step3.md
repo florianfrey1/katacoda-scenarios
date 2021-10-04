@@ -33,11 +33,11 @@ ORDER BY umsatz DESC;`{{execute}}
 
 Folgendes Ergebnis sollte dabei rauskommen:
 
-| bezeichnung | umsatz |
-| :---------- | -----: |
-| Paula       |  18.79 |
-| Paul        |  11.85 |
-| Peter       |      0 |
+| vorname | umsatz |
+| :------ | -----: |
+| Paula   |  18.79 |
+| Paul    |  11.85 |
+| Peter   |      0 |
 
 Um dieses Ergebnis zu erhalten, müssen alle Tabellen des Webshops miteinander verbunden werden: Dafür sind drei Joins notwendig.
 Mit steigender Komplexität eines solchen OLTP-Systems nimmt auch die Anzahl an Joins für analytische Abfragen zu. 
