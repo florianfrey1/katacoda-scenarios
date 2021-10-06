@@ -36,7 +36,7 @@ ORDER BY umsatz DESC;`{{execute}}
     <p>Die Coalesce-Funktion in Postgres gibt das erste Argument, das nicht NULL ist, zurück. Dadurch können NULL-Werte in Abfragen beispielsweise durch Default-Werte ersetzt werden.</p>
 </div>
 
-Folgendes Ergebnis sollte bei der Abfrage heraus kommen:
+Diese Abfrage erzeugt folgendes Ergebnis:
 
 | vorname | umsatz |
 | :------ | -----: |
