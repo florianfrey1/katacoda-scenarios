@@ -10,9 +10,15 @@ Das Sternschema ist eine einfache Form des Schneeflokenschemas (snow flake schem
 <img src="assets/star_schema.png" alt="Schematisches Beispiel eines Sternschemas" style="max-width: 350px; display: block">
 <i style="font-size: 80%">Abbildung 1: Schematische Darstellung eines Sternschemas.</i>
 
-Eine Faktentabelle enthält die quantitativen Zahlen eines Vorgangs [2].
+Eine Faktentabelle enthält die quantitativen Zahlen eines Prozesses - also Metriken und Kennzahlen [2].
 Das können beispielsweise Geschäftsereignisse wie Verkaufstransaktionen oder Anmeldungen von Kunden sein [3].
-Die Dimensionstabellen ergänzen die Faktentabellen mit beschreibenden, qualitativen Informationen [2].
+Die Dimensionstabellen ergänzen die Faktentabellen mit beschreibenden, qualitativen Informationen. Diese Informationen dienen zusätzlich zum Filtern und Gruppieren der Fakten.
+Während Faktentabellen in der Regel sehr groß ist, weisen Dimensionstabellen nur kleine Größen auf [2].
+
+Der Aufbau einer Faktentabelle besteht zum einen aus den Fremdschlüssel-Attributen, die auf die Dimensionstabellen verweisen, und zum anderen den Fakten-Attributen.
+Der Primärschlüssel kann aus den Fremdschlüsseln zusammengesetzt oder ein separates Attribut sein.
+Die Dimensionstabellen verfügen über ein Primärschlüssel-Attribut, das von der Faktentabelle referenziert wird, und weiteren Attributen, die die Dimension beschreiben.
+Attribute einer Dimensionstabellen haben oft eine hierarchische Verbindung untereinander, was eine sogenannte Drill-Down-Analyse ermöglicht [2].
 
 # Funktionsweise
 
@@ -23,7 +29,7 @@ Beim Aufbereiten der Daten wird auf schnelle Abfragen Wert gelegt. Die benötigt
 
 Durch die Verwendung eines Sternschemas im Vergleich zu einem relationalen Schema in Normalform reduziert sich die Anzahl an Joins für eine Anfrage erheblich.
 Dadurch können komplizierte Abfragen deutlich effizienter sowie Ad-Hoc Abfragen leichter ausgeführt werden.
-Tabellen eines Sternschemas befinden sich nicht in der dritten Normalform nach Boyce Codd [2].
+Tabellen eines Sternschemas befinden sich nicht in der dritten Normalform nach Boyce Codd [2]. Dadurch nehmen sie mögliche Anomalien in Kauf und weisen keinen optimalen Speicherbedarf auf.
 
 # Verwendung
 
