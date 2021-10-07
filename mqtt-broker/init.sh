@@ -2,10 +2,10 @@
 
 # Wait for all assets to be loaded. The last asset is
 # the Vorlesungsbezug.png file.
-until [ -f ./Vorlesungsbezug.png ] &> /dev/null
-do
-    sleep 1 &> /dev/null
-done
+# until [ -f ./Vorlesungsbezug.png ] &> /dev/null
+# do
+#     sleep 1 &> /dev/null
+# done
 
 touch /root/assets.ready
 

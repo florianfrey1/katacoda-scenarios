@@ -26,10 +26,6 @@
     },
     "assets": {
       "host01": [
-        {
-          "file": "Vorlesungsbezug.png",
-          "target": "/root"
-        }
       ]
     }
   },
