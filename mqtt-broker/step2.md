@@ -1,32 +1,6 @@
-MQTT
+Die Umgebung wird konfiguriert. Bitte habe einen Moment Geduld... Wenn eine leere Komandozeile erscheint, kannst du fortfahren.
 
-<pre class="file" data-filename="publisher.js" data-target="replace">
-const mqtt = require('mqtt')
-const client = mqtt.connect('mqtt://localhost:1883')
-
-client.on('connect', function () {
-    setInterval(() => {
-        client.publish('random_data', (Math.floor(Math.random() * 1e12)).toString(16))
-    }, 1e3)
-})
-</pre>
-
-<pre class="file" data-filename="subscriber.js" data-target="replace">
-const mqtt = require('mqtt')
-const client = mqtt.connect('mqtt://localhost:1883')
-
-client.on('connect', function () {
-    client.subscribe('random_data')
-})
-
-client.on('message', function (topic, message) {
-    console.log(`[${topic}] ${message.toString()}`)
-})
-</pre>
-
-`npx pm2 start publisher.js
-npx pm2 start subscriber.js --name subscriber_1
-npx pm2 start subscriber.js --name subscriber_2`{{execute}}
-
-`npx pm2 logs`{{execute}}
-`npx pm2 monit`{{execute}}
+<div style="background: #29bfff; width: 100%; border-radius: 3px; box-sizing: border-box; padding: 20px; margin: 20px 0; color: black">
+    <div style="position: relative; font-size: 110%; font-weight: bold">🛈 Quellcode</div>
+    <p>Den Quellcode zu dieser Katacoda findest du auf <a href="https://github.com/florianfrey1/katacoda-scenarios/tree/main/mqtt-broker">GitHub</a>.</p>
+</div>

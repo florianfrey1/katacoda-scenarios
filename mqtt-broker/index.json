@@ -7,15 +7,19 @@
   "details": {
     "steps": [
       {
+        "title": "Theorie",
+        "text": "step1.md"
+      },
+      {
         "title": "Umgebung",
-        "text": "step1.md",
+        "text": "step2.md",
         "foreground": "monitor.init.sh",
         "background": "init.sh",
         "verify": "verify.init.sh"
       },
       {
-        "title": "Erste Schritte",
-        "text": "step2.md"
+        "title": "Beispiel mit HiveMQ",
+        "text": "step3.md"
       }
     ],
     "intro": {
