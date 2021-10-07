@@ -2,16 +2,16 @@ In dieser Katacoda wurden die wesentlichen Eigenschaften des Sternschemas erklä
 
 # Quellen
 
-[1] Buckenhofer, A. (2021). Data Warehouse.
+[1] A. Buckenhofer, “Vorlesung: Data Warehouse,” 2021, Duale Hochschule Baden-Württemberg Stuttgart.<br>
 
-[2] Vavouras, A., & Gatziu, S. (2000). Modeling and Maintaining Histories in Data Warehouses. Information Als Erfolgsfaktor, 113–122. https://doi.org/10.1007/978-3-322-84796-6_10 <br>
+[2] A. Vavouras and S. Gatziu, “Modeling and Maintaining Histories in Data Warehouses,” Inf. als Erfolgsfaktor, pp. 113–122, 2000, doi: 10.1007/978-3-322-84796-6_10.
 
-[3] Corr, L., & Stagnitto, J. (2011). Agile data warehouse design: Collaborative dimensional modeling, from whiteboard to star schema. DecisionOne Consulting.<br>
+[3] L. Corr and J. Stagnitto, Agile data warehouse design: Collaborative dimensional modeling, from whiteboard to star schema. DecisionOne Consulting, 2011. <br>
 
-[4] Corral, K., Schuff, D., & St. Louis, R. D. (2006). The impact of alternative diagrams on the accuracy of recall: A comparison of star-schema diagrams and entity-relationship diagrams. Decision Support Systems, 42(1), 450–468. https://doi.org/10.1016/j.dss.2005.02.003<br>
+[4] K. Corral, D. Schuff, and R. D. St. Louis, “The impact of alternative diagrams on the accuracy of recall: A comparison of star-schema diagrams and entity-relationship diagrams,” Decis. Support Syst., vol. 42, no. 1, pp. 450–468, Oct. 2006, doi: 10.1016/j.dss.2005.02.003.<br>
 
-[5] Inmon, W. H., & Puppini, F. (2020). The Unified Star Schema : an agile and resilient approach to data warehouse and analytics design. 288.<br>
+[5] W. H. Inmon and F. Puppini, “The Unified Star Schema : an agile and resilient approach to data warehouse and analytics design,” p. 288, 2020.<br>
 
-[6] Manhart, K. (2008). OLAP und OLTP. https://substring.ch/glossar/olap-oltp-erklaert.html<br>
+[6] K. Manhart, “OLAP und OLTP,” 2008. https://substring.ch/glossar/olap-oltp-erklaert.html (accessed Oct. 02, 2021).<br>
 
-[7] Data, M., Data, S., & Data, A. (2021). Transforming OLTP Data to OLAP Data Warehouses. 933151. https://documentation.help/architec/ar_dts_whs_2jsj.htm<br>
+[7] M. Data, S. Data, and A. Data, “Transforming OLTP Data to OLAP Data Warehouses,” vol. 933151, 2021, Accessed: Oct. 01, 2021. [Online]. Available: https://documentation.help/architec/ar_dts_whs_2jsj.htm. <br>
