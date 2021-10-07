@@ -13,8 +13,8 @@
       {
         "title": "Umgebung",
         "text": "step2.md",
-        "code": "monitor-init.sh",
-        "courseData": "init.sh",
+        "foreground": "monitor-init.sh",
+        "background": "init.sh",
         "verify": "verify-step1.sh"
       },
       {
@@ -41,6 +41,10 @@
         },
         {
           "file": "olap_simple_shop_database.svg",
+          "target": "/root/assets"
+        },
+        {
+          "file": "Vorlesungsbezug.png",
           "target": "/root/assets"
         },
         {
