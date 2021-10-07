@@ -7,7 +7,7 @@ Es ist in der Lage Anfragen auf große Datenmengen effizient auszuführen [2].
 Bei dem Sternschema gibt es zentrale Faktentabellen, die von mehreren Dimensionstabellen umgeben sind (siehe _Abbildung 1_).
 Das Sternschema ist eine einfache Form des Schneeflokenschemas (snow flake schema), welches verkettete Dimensionstabellen verwendet.
 
-<img src="star_schema.png" alt="Schematisches Beispiel eines Sternschemas" style="max-width: 350px; width: 100%; display: block">
+<img src="star_schema.png" alt="Schematische Darstellung eines Sternschemas" style="max-width: 350px; width: 100%; display: block">
 <i style="font-size: 80%">Abbildung 1: Schematische Darstellung eines Sternschemas.</i>
 
 Eine Faktentabelle enthält die quantitativen Zahlen eines Prozesses - also Metriken und Kennzahlen [3].
