@@ -36,22 +36,6 @@
           "chmod": "+x"
         },
         {
-          "file": "oltp_simple_shop_database.svg",
-          "target": "/root/assets"
-        },
-        {
-          "file": "olap_simple_shop_database.svg",
-          "target": "/root/assets"
-        },
-        {
-          "file": "data_cube.png",
-          "target": "/root/assets"
-        },
-        {
-          "file": "star_schema.png",
-          "target": "/root/assets"
-        },
-        {
           "file": "create-databases.sql",
           "target": "/root"
         }
