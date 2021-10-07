@@ -1,8 +1,9 @@
 {
   "title": "MQTT-Broker",
-  "description": "",
+  "description": "Lerne, wie MQTT-Broker im Internet of Things funktioniert",
   "difficulty": "Beginner",
   "time": "8 minutes",
+  "icon": "fa-network-wired",
   "details": {
     "steps": [
       {
