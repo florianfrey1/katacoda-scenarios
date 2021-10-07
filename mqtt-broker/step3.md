@@ -2,13 +2,13 @@
 
 <pre class="file" data-filename="publisher.js" data-target="replace">
 const mqtt = require('mqtt')
-const client = mqtt.connect('mqtt://localhost:1883')
+const client = mqtt.connect('mqtt://localhost:1883', { will: { topic: 'random_data', payload: 'Ich bin raus!' } })
 
 client.on('connect', function () {
     setInterval(() => {
         const randomData = (Math.floor(Math.random() * 1e12)).toString(16)
         client.publish('random_data', randomData)
-        console.log(`Published to 'random_data': ${randomData}`)
+        console.log(`Veröffentlicht über 'random_data': ${randomData}`)
     }, 1e3)
 })
 </pre>
@@ -22,13 +22,14 @@ client.on('connect', function () {
 })
 
 client.on('message', function (topic, message) {
-    console.log(`Received from '${topic}': ${message.toString()}`)
+    console.log(`Empfangen von '${topic}': ${message.toString()}`)
 })
 </pre>
 
-`npx pm2 start publisher.js
-npx pm2 start subscriber.js --name subscriber_1
-npx pm2 start subscriber.js --name subscriber_2`{{execute}}
+`pm2 start publisher.js
+pm2 start subscriber.js --name subscriber_1
+pm2 start subscriber.js --name subscriber_2`{{execute}}
 
-`npx pm2 logs`{{execute}}
-`npx pm2 monit`{{execute}}
+`pm2 logs`{{execute}}
+`pm2 monit`{{execute}}
+`pm2 delete publisher`{{execute}}
