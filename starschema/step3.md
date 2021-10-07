@@ -8,7 +8,7 @@ Am Beispiel eines einfachen Webshops soll der Unterschied zwischen einem relatio
 
 # Relationales Schema
 
-<img src="oltp_simple_shop_database.svg" alt="Relationales Schema eines einfachen Webshops" style="max-width: 450px; width: 100%; display: block">
+<img src="assets/oltp_simple_shop_database.svg" alt="Relationales Schema eines einfachen Webshops" style="max-width: 450px; width: 100%; display: block">
 <i style="font-size: 80%">Abbildung 3: Relationales Schema eines einfachen Webshops.</i>
 
 In _Abbildung 3_ ist das normalisierte, relationale Schema eines einfachen Webshops dargestellt. 
@@ -55,7 +55,7 @@ In _Abbildung 4_ ist ein vereinfachtes Sternschema für das Beispiel des Webshop
 Die rot markierte Tabelle ist die Faktentabelle mit den Umsätzen der verkauften Artikel und die grün markierten Tabellen sind die Dimensionstabellen.
 Die Dimensionstabellen entsprechen in diesem Fall eins zu eins den Tabellen aus dem OLTP-System.
 
- <img src="olap_simple_shop_database.svg" alt="Dimensionales Sternschema für ein vereinfachten Data Warehouses des Webshops" style="max-width: 450px; width: 100%; display: block">
+ <img src="assets/olap_simple_shop_database.svg" alt="Dimensionales Sternschema für ein vereinfachten Data Warehouses des Webshops" style="max-width: 450px; width: 100%; display: block">
 <i style="font-size: 80%">Abbildung 4: Dimensionales Sternschema für ein vereinfachten Data Warehouses des Webshops. Die rot markierte Tabelle ist die Faktentabelle, die grün markierten Tabellen sind die Dimensionstabellen.</i>
 
 Der folgende SQL-Befehl holt die entsprechenden Daten aus dem fiktiven OLTP-System des Webshops und schreibt sie in das nach dem Sternschema definierte Datawarehouse.

@@ -7,7 +7,7 @@ Es ist in der Lage Anfragen auf große Datenmengen effizient auszuführen [2].
 Bei dem Sternschema gibt es zentrale Faktentabellen, die von mehreren Dimensionstabellen umgeben sind (siehe _Abbildung 1_).
 Das Sternschema ist eine einfache Form des Schneeflokenschemas (snow flake schema), welches verkettete Dimensionstabellen verwendet.
 
-<img src="star_schema.png" alt="Schematische Darstellung eines Sternschemas" style="max-width: 350px; width: 100%; display: block">
+<img src="assets/star_schema.png" alt="Schematische Darstellung eines Sternschemas" style="max-width: 350px; width: 100%; display: block">
 <i style="font-size: 80%">Abbildung 1: Schematische Darstellung eines Sternschemas.</i>
 
 Eine Faktentabelle enthält die quantitativen Zahlen eines Prozesses - also Metriken und Kennzahlen [3].
@@ -35,7 +35,7 @@ Tabellen eines Sternschemas befinden sich nicht in der dritten Normalform nach B
 
 Ein Datawarehouse ermöglicht bei Verwendung eines Sternschemas eine mehrdimensionale Sicht auf die Daten. Dies ist in _Abbildung 2_ als schematisches Beispiel dargestellt.
 
-<img src="data_cube.png" alt="OLAP Data Cube Beispiel" style="max-width: 350px; width: 100%; display: block">
+<img src="assets/data_cube.png" alt="OLAP Data Cube Beispiel" style="max-width: 350px; width: 100%; display: block">
 <i style="font-size: 80%">Abbildung 2: Schematisches Beispiel eines Datenwürfels.</i>
 
 Eine Frage einer Geschäftsanalyse in einer dimensionalen Datenbank könnte folgendermaßen lauten: Wie viele Tablets wurden in Europa und Asien im Jahr 2020 verkauft.

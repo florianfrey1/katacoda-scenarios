@@ -7,5 +7,5 @@ In dieser Katacoda wird der Aufbau, die Funktionsweise sowie die Verwendung besc
 Im praktischen Teil wird eine Konvertierung von Daten aus einem operativen, relationalen System in ein Sternschema basiertes Datawarehouse demonstriert.
 In _Abbildung 1_ ist dieser Vorgang schematisch skizziert: Aus den Online Transaction Processing (OLTP) Systemen werden die Daten entnommen und in das Warehouse, das nach dem Online Analytical Processing (OLAP) Prinzip arbeitet, überführt. Bei OLTP-Systemen liegt der Fokus auf der Echtzeitausführung von Transaktionen und mit OLAP-Systemen lassen sich große mehrdimensionale Datenmengen analysieren.
 
-<img src="oltp-vs-olap.png" alt="OLTP vs OLAP" style="max-width: 350px; width: 100%; display: block">
+<img src="assets/oltp-vs-olap.png" alt="OLTP vs OLAP" style="max-width: 450px; width: 100%; display: block">
 <i style="font-size: 80%">Abbildung 1: OLTP vs OLAP [1].</i>
