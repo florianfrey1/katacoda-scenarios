@@ -5,5 +5,5 @@ Operative Datenbanksysteme entsprechen dem OLTP- und Datawarehouses dem OLAP-Pri
 Während ein OLTP-System meistens auf einem normalisierten, relationalen Datenbankschema beruht, kommt bei OLAP-Systemen häufig ein abgeändertes Datenbankschema zum Einsatz: Das Sternschema.
 In dieser Katacoda wird das Sternschema anhand eines einfachen Beispiels praktisch erklärt.
 
-<img src="assets/Vorlesungsbezug.png" alt="OLAP Data Cube Beispiel" style="max-width: 350px; display: block">
+<img src="assets/Vorlesungsbezug.png" alt="OLAP Data Cube Beispiel" style="max-width: 350px; width: 100%; display: block">
 <i style="font-size: 80%">Abbildung 1: Folie aus der Vorlesung "Data Warehouse": OLTP vs OLAP.</i>
