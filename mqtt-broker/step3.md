@@ -6,7 +6,9 @@ const client = mqtt.connect('mqtt://localhost:1883')
 
 client.on('connect', function () {
     setInterval(() => {
-        client.publish('random_data', (Math.floor(Math.random() * 1e12)).toString(16))
+        const randomData = (Math.floor(Math.random() * 1e12)).toString(16)
+        client.publish('random_data', randomData)
+        console.log(`Published to 'random_data': ${randomData}`)
     }, 1e3)
 })
 </pre>
@@ -20,7 +22,7 @@ client.on('connect', function () {
 })
 
 client.on('message', function (topic, message) {
-    console.log(`[${topic}] ${message.toString()}`)
+    console.log(`Received from '${topic}': ${message.toString()}`)
 })
 </pre>
 
