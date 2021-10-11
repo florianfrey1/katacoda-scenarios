@@ -1,3 +1,5 @@
+<!-- TODO: Versionen von MQTT (3.1, 5) -->
+
 Das im Jahr 1999 von der IBM entwickelte MQTT-Protokoll ist inzwischen ein offizieller Standard (ISO/IEC 20922, OASIS) für den Nachrichtenaustausch im Internet der Dinge [Dinculeana2019, IBM2010, Mqtt-v5.02019, Soni2017].
 Es wurde entwickelt, um Nachrichten in einem Netz mit geringer Bandbreite und langer Netzverzögerung zuverlässig zu übertragen [CheonHwang2016, Soni2017].
 
