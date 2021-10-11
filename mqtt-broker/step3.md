@@ -1,3 +1,8 @@
+<script>
+    $('.add-new-terminal').click()
+    $('.add-new-terminal').click()
+</script>
+
 In diesem Beispiel werden die Grundfunktionen eines MQTT-Broker gezeigt.
 Es gibt einen Publisher, der zufällige Wörter unter dem Thema `random_data` veröffentlicht.
 Zwei Subscriber, die das Thema abonniert haben, empfangen die zufällig generierten Wörter und geben sie auf der Konsole aus.
