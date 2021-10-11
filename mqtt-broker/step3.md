@@ -62,9 +62,13 @@ Anschließend kann über folgenden Befehl die Ausgabe aller Instanzen verfolgt w
 
 <div style="background: #29bfff; width: 100%; border-radius: 3px; box-sizing: border-box; padding: 20px; margin: 20px 0; color: black">
     <div style="position: relative; font-size: 110%; font-weight: bold">🛈 PM2-Monitoring (optional)</div>
-    <p>Optional kann eine Übersicht aller laufenden Instanzen unter PM2 mit dem Befehl <code class="execute executed" title="Run command">pm2 monit</code> angezeigt werden.</p>
+    <p>Optional kann eine Übersicht aller laufenden Instanzen unter PM2 mit dem Befehl <code class="execute T3" title="Run command">pm2 monit</code> angezeigt werden.</p>
 </div>
 
-
+<img src="assets/pm2-logs-1.png" alt="Beispiel für die Verwendung von MQTT" style="max-width: 450px; width: 100%; display: block">
+<i style="font-size: 80%">Abbildung 1: Beispiel für die Verwendung von MQTT [MQTT2021].</i>
 
 `pm2 delete publisher`{{execute T2}}
+
+<img src="assets/pm2-logs-2.png" alt="Beispiel für die Verwendung von MQTT" style="max-width: 450px; width: 100%; display: block">
+<i style="font-size: 80%">Abbildung 1: Beispiel für die Verwendung von MQTT [MQTT2021].</i>
