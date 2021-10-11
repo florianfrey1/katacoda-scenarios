@@ -1,4 +1,4 @@
-Die Umgebung wird konfiguriert. Bitte habe einen Moment Geduld... Wenn die Postgres-Komandozeile erscheint, kannst du fortfahren.
+Die Umgebung wird konfiguriert. Bitte habe einen Moment Geduld... Wenn die Postgres-Kommandozeile erscheint, kannst du fortfahren.
 
 <div style="background: #29bfff; width: 100%; border-radius: 3px; box-sizing: border-box; padding: 20px; margin: 20px 0; color: black">
     <div style="position: relative; font-size: 110%; font-weight: bold">🛈 Tabellen und Demodaten</div>
