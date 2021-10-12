@@ -53,8 +53,6 @@ Allerdings gibt er keinen "letzten Willen" an.
 Sobald die Verbindung zum MQTT-Broker hergestellt wurde, abonniert der Subscriber das Thema `random_data`.
 Wenn eine neue Nachricht ankommt, wird das Thema und der Titel auf der Konsole ausgegeben.
 
-# Ausführung
-
 Die Ausführung des Beispiels erfolgt mit PM2: Es wird eine Instanz des Publishers und zwei Instanzen des Subscribers mit den Namen `subscriber_1` und `subscriber_2` gestartet.
 
 `pm2 start publisher.js
@@ -70,10 +68,17 @@ Anschließend kann über folgenden Befehl die Ausgabe aller Instanzen verfolgt w
     <p>Optional kann eine Übersicht aller laufenden Instanzen unter PM2 mit dem Befehl <code class="execute T3" title="Run command">pm2 monit</code> angezeigt werden.</p>
 </div>
 
+Die Ausgabe des PM2-Logs ist in _Abbildung 7_ exemplarisch dargestellt.
+
 <img src="assets/pm2-logs-1.png" alt="Beispiel für die Verwendung von MQTT" style="max-width: 450px; width: 100%; display: block">
-<i style="font-size: 80%">Abbildung 1: Beispiel für die Verwendung von MQTT [MQTT2021].</i>
+<i style="font-size: 80%">Abbildung 7: Exemplarische Ausgabe des PM2-Logs.</i>
+
+Mit dem folgenden Befehl wird die Instanz des Publishers beendet.
+Damit wird in diesem Fall der Ausfall des Publishers simuliert.
 
 `pm2 delete publisher`{{execute T2}}
 
+Wenn der Publisher nicht mehr mit dem MQTT-Broker verbunden ist, sendet der MQTT-Broker den "letzten Willen" für jedes Thema an die entsprechenden Subscriber. In _Abbildung 8_ ist die Ausgabe der Subscriber nach dem Beenden des Publishers exemplarisch dargestellt.
+
 <img src="assets/pm2-logs-2.png" alt="Beispiel für die Verwendung von MQTT" style="max-width: 450px; width: 100%; display: block">
-<i style="font-size: 80%">Abbildung 1: Beispiel für die Verwendung von MQTT [MQTT2021].</i>
+<i style="font-size: 80%">Abbildung 8: Exemplarische Ausgabe des PM2-Logs nachdem die Instanz des Publishers beendet wurde.</i>
