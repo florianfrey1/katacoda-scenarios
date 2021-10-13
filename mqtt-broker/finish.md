@@ -1,3 +1,5 @@
+In dieser Katacoda wurde ein Überblick über die Funktionsweise des MQTT-Protokolls gegeben und an einem praktischen Beispiel die Grundfunktionen demonstriert.
+
 # Quellen
 
 [1] A. Buckenhofer, “Vorlesung: Internet of Things,” 2021, Duale Hochschule Baden-Württemberg Stuttgart.<br>
