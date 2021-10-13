@@ -9,6 +9,6 @@ Wenn eine leere Kommandozeile erscheint, kannst du fortfahren.
 
 # Komponenten
 
-Als MQTT-Broker wird HiveMQ in der Community-Edition in einem Docker-Container eingesetzt [11], [12].
-Die Publish- und Subscribe-Clients des Beispiels werden in Javascript (NodeJS) umgesetzt [13].
-Für die parallele Ausführung der Clients wird PM2 verwendet [14].
+Als MQTT-Broker wird HiveMQ in der Community-Edition in einem Docker-Container eingesetzt [10], [11].
+Die Publish- und Subscribe-Clients des Beispiels werden in Javascript (NodeJS) umgesetzt [12].
+Für die parallele Ausführung der Clients wird PM2 verwendet [13].
