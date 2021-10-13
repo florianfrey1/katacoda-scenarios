@@ -53,6 +53,8 @@ Allerdings gibt er keinen "letzten Willen" an.
 Sobald die Verbindung zum MQTT-Broker hergestellt wurde, abonniert der Subscriber das Thema `random_data`.
 Wenn eine neue Nachricht ankommt, wird das Thema und der Titel auf der Konsole ausgegeben.
 
+# Ausführung
+
 Die Ausführung des Beispiels erfolgt mit PM2: Es wird eine Instanz des Publishers und zwei Instanzen des Subscribers mit den Namen `subscriber_1` und `subscriber_2` gestartet.
 
 `pm2 start publisher.js
@@ -73,8 +75,10 @@ Die Ausgabe des PM2-Logs ist in _Abbildung 7_ exemplarisch dargestellt.
 <img src="assets/pm2-logs-1.png" alt="Beispiel für die Verwendung von MQTT" style="max-width: 450px; width: 100%; display: block">
 <i style="font-size: 80%">Abbildung 7: Exemplarische Ausgabe des PM2-Logs.</i>
 
-Mit dem folgenden Befehl wird die Instanz des Publishers beendet.
-Damit wird in diesem Fall der Ausfall des Publishers simuliert.
+# "Letzter Wille"
+
+Mit dem folgendem Befehl wird die Instanz des Publishers beendet.
+Damit wird in diesem Fall der Ausfall des Publishers simuliert, um die Übermittlung des "letzten Willens" zu demonstrieren.
 
 `pm2 delete publisher`{{execute T2}}
 

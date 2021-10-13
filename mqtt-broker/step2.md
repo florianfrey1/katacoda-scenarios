@@ -9,6 +9,6 @@ Wenn eine leere Kommandozeile erscheint, kannst du fortfahren.
 
 # Komponenten
 
-Als MQTT-Broker wird HiveMQ in der Community-Edition in einem Docker-Container eingesetzt [HiveMQDockerHub2021, HiveMQGitHub2021].
-Die Publish- und Subscribe-Clients des Beispiels werden in Javascript (NodeJS) umgesetzt [NodeJs2021].
-Für die parallele Ausführung der Clients wird PM2 verwendet [PM22021].
+Als MQTT-Broker wird HiveMQ in der Community-Edition in einem Docker-Container eingesetzt [11], [12].
+Die Publish- und Subscribe-Clients des Beispiels werden in Javascript (NodeJS) umgesetzt [13].
+Für die parallele Ausführung der Clients wird PM2 verwendet [14].
