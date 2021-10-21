@@ -18,12 +18,14 @@ In dieser Katacoda wurde ein Überblick über die Funktionsweise des MQTT-Protok
 
 [8] MQTT, “MQTT: The Standard for IoT Messaging,” Mqtt.Org, 2021. https://mqtt.org/ (accessed Oct. 05, 2021).
 
-[9] HiveMQ GmbH, “Payload Encryption - MQTT Security Fundamentals,” 2021. https://www.hivemq.com/blog/mqtt-security-fundamentals-payload-encryption/ (accessed Oct. 07, 2021).
+[9] HiveMQ GmbH, “HiveMQ - Enterprise ready MQTT to move your IoT data,” 2021. https://www.hivemq.com/ (accessed Oct. 07, 2021).
 
-[10] “Docker Image | Docker Hub.” https://hub.docker.com/r/hivemq/hivemq-ce (accessed Oct. 11, 2021).
+[10] P. Fehrenbach, “Messaging Queues in the IoT under pressure Stress Testing the Mosquitto MQTT Broker,” 2017.
 
-[11] “hivemq/hivemq-community-edition: HiveMQ CE is a Java-based open source MQTT broker that fully supports MQTT 3.x and MQTT 5. It is the foundation of the HiveMQ Enterprise Connectivity and Messaging Platform.” https://github.com/hivemq/hivemq-community-edition (accessed Oct. 11, 2021).
+[11] “Docker Image | Docker Hub.” https://hub.docker.com/r/hivemq/hivemq-ce (accessed Oct. 11, 2021).
 
-[12] “Node.js.” https://nodejs.org/en/ (accessed Oct. 11, 2021).
+[12] “hivemq/hivemq-community-edition: HiveMQ CE is a Java-based open source MQTT broker that fully supports MQTT 3.x and MQTT 5. It is the foundation of the HiveMQ Enterprise Connectivity and Messaging Platform.” https://github.com/hivemq/hivemq-community-edition (accessed Oct. 11, 2021).
 
-[13] “PM2 - Home.” https://pm2.keymetrics.io/ (accessed Oct. 11, 2021).
+[13] “Node.js.” https://nodejs.org/en/ (accessed Oct. 11, 2021).
+
+[14] “PM2 - Home.” https://pm2.keymetrics.io/ (accessed Oct. 11, 2021).
