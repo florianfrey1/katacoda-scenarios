@@ -40,16 +40,15 @@ aufgrund von Netzwerkbedingungen zu einer vertauschten Nachrichtenreihenfolge be
 # Themen
 
 In MQTT werden Themen als UTF-8 Zeichenkette angegeben und können hierarchisch angelegt werden.
-Als Trennzeichen für die einzelnen Ebenen wird ein Slash verwendet.
+Als Trennzeichen für die einzelnen Ebenen wird ein Slash (/) verwendet.
 Zusätzlich können Platzhalter für einzelne oder mehrere Ebenen verwendet werden (siehe _Tabelle 1_).
 
 | Platzhalter | Beschreibung                  |
 | :---------: | :---------------------------- |
 |      +      | Platzhalter für eine Ebene    |
 |      #      | Platzhalte für mehrere Ebenen |
-<i style="font-size: 80%">Tabelle1: Platzhalter für Ebenen in hierarchischen Themen.</i>
 
-<!-- BEISPIEL! -->
+<i style="font-size: 80%">Tabelle1: Platzhalter für Ebenen in hierarchischen Themen.</i>
 
 # Übertragungsqualitäten
 
