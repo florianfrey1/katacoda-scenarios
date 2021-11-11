@@ -1,4 +1,4 @@
-<form action="#" onsubmit="alert('!')">
+<form action="javascript:alert('!')">
     <button type="submit">
         Let's do it
     </button>
