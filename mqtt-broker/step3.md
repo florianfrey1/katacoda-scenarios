@@ -59,11 +59,11 @@ Die Ausführung des Beispiels erfolgt mit PM2: Es wird eine Instanz des Publishe
 
 `pm2 start publisher.js
 pm2 start subscriber.js --name subscriber_1
-pm2 start subscriber.js --name subscriber_2`{{execute T1}}
+pm2 start subscriber.js --name subscriber_2`{{execute}}
 
 Anschließend kann über folgenden Befehl die Ausgabe aller Instanzen verfolgt werden:
 
-`pm2 logs`{{execute T2}}
+`pm2 logs`{{execute interrupt}}
 
 <div style="background: #29bfff; width: 100%; border-radius: 3px; box-sizing: border-box; padding: 20px; margin: 20px 0; color: black">
     <div style="position: relative; font-size: 110%; font-weight: bold">🛈 PM2-Monitoring (optional)</div>
@@ -77,10 +77,16 @@ Die Ausgabe des PM2-Logs ist in _Abbildung 7_ exemplarisch dargestellt.
 
 # Letzter Wille
 
+Um die Funktion des letzten Willens gut demonstrieren, benötigen wir ein zweites Terminal, um den Publisher beenden zu können ohne das Logging zu unterbrechen.
+
+<button onclick="$('.add-new-terminal').click()">
+Zweites Terminal öffnen
+</button><br><br>
+
 Mit dem folgendem Befehl wird die Instanz des Publishers beendet.
 Damit wird in diesem Fall der Ausfall des Publishers simuliert, um die Übermittlung des letzten Willens zu demonstrieren.
 
-`echo & pm2 delete publisher`{{execute T2}}
+`pm2 delete publisher`{{execute T2}}
 
 Wenn der Publisher nicht mehr mit dem MQTT-Broker verbunden ist, sendet der MQTT-Broker den letzten Willen für jedes Thema an die entsprechenden Subscriber. In _Abbildung 8_ ist die Ausgabe der Subscriber nach dem Beenden des Publishers exemplarisch dargestellt.
 
