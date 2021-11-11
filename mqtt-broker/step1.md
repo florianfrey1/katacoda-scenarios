@@ -1,3 +1,9 @@
+<form action="#" onsubmit="alert('!')">
+    <button type="submit">
+        Let's do it
+    </button>
+</form>
+
 Das im Jahr 1999 von der IBM entwickelte MQTT-Protokoll ist inzwischen ein offizieller Standard (ISO/IEC 20922, OASIS) für den Nachrichtenaustausch im Internet der Dinge [2] - [5].
 Es wurde entwickelt, um Nachrichten in einem Netz mit geringer Bandbreite und langer Netzverzögerung zuverlässig zu übertragen [5], [6].
 
