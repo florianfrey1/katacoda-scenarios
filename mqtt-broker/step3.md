@@ -79,9 +79,9 @@ Die Ausgabe des PM2-Logs ist in _Abbildung 7_ exemplarisch dargestellt.
 
 Um die Funktion des letzten Willens gut demonstrieren, benötigen wir ein zweites Terminal, um den Publisher beenden zu können ohne das Logging zu unterbrechen.
 
-<form action="#" onsubmit="$('.add-new-terminal').click(); $('#open-second-terminal').append('✓').prop('disabled', true)">
+<form action="#" onsubmit="$('.add-new-terminal').click(); $('#open-second-terminal').append('Zweites Terminal öffnen ✓').prop('disabled', true)">
     <button id="open-second-terminal" type="submit">
-        Zweites Terminal öffnen
+        Zweites Terminal öffnen ↩
     </button>
 </form>
 
