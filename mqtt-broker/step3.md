@@ -3,7 +3,7 @@
     $('.add-new-terminal').click()
 </script>
 
-In diesem Beispiel werden die Grundfunktionen eines MQTT-Broker gezeigt.
+In diesem Beispiel werden die Grundfunktionen eines MQTT-Brokers gezeigt.
 Es gibt einen Publisher, der zufällige Wörter unter dem Thema `random_data` veröffentlicht.
 Zwei Subscriber, die das Thema abonniert haben, empfangen die zufällig generierten Wörter und geben sie auf der Konsole aus.
 
@@ -77,7 +77,7 @@ Die Ausgabe des PM2-Logs ist in _Abbildung 7_ exemplarisch dargestellt.
 
 # Letzter Wille
 
-Um die Funktion des letzten Willens gut demonstrieren, benötigen wir ein zweites Terminal, um den Publisher beenden zu können ohne das Logging zu unterbrechen.
+Um die Funktion des letzten Willens gut demonstrieren zu können, wird ein zweites Terminal benötigt, um den Publisher beenden zu können ohne das Logging zu unterbrechen.
 
 <form action="#" onsubmit="$('.add-new-terminal').click(); $('#open-second-terminal').text('Zweites Terminal öffnen ✓').prop('disabled', true)">
     <button id="open-second-terminal" type="submit">
@@ -91,8 +91,9 @@ Damit wird in diesem Fall der Ausfall des Publishers simuliert, um die Übermitt
 `pm2 delete publisher`{{execute T2}}
 
 Wenn der Publisher nicht mehr mit dem MQTT-Broker verbunden ist, sendet der MQTT-Broker den letzten Willen für jedes Thema an die entsprechenden Subscriber.
-In _Abbildung 8_ ist die Ausgabe der Subscriber nach dem Beenden des Publishers exemplarisch dargestellt.
 Wechsle in das erste Terminal, um das zu überprüfen.
 
 <img src="assets/pm2-logs-2.png" alt="Beispiel für die Verwendung von MQTT" style="max-width: 450px; width: 100%; display: block">
 <i style="font-size: 80%">Abbildung 8: Exemplarische Ausgabe des PM2-Logs nachdem die Instanz des Publishers beendet wurde.</i>
+
+In _Abbildung 8_ ist die Ausgabe der Subscriber nach dem Beenden des Publishers exemplarisch dargestellt.

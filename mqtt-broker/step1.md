@@ -3,7 +3,7 @@ Es wurde entwickelt, um Nachrichten in einem Netz mit geringer Bandbreite und la
 
 # Funktionsweise
 
-MQTT ist ein Push-Protokoll, dass über einen Publish/Subscribe-Verfahren verfügt [5], [6].
+MQTT ist ein Push-Protokoll, dass über ein Publish/Subscribe-Verfahren verfügt [5], [6].
 Ein Abonnent (subscriber) kann bestimmte Themen (topics) abonnieren und erhält dann alle Nachrichten, die für diese Themen veröffentlicht werden [5], [7].
 Die Push-Methode ist der Pull-Methode vorgezogen worden, da sie entstehende Daten ressourcenschonend und ohne Polling direkt verschicken kann [5].
 
@@ -78,24 +78,24 @@ Die höchste Stufe der Übertragungsqualität, QoS 2, garantiert mit Hilfe eines
 
 Nachrichten des MQTT-Protokolls haben einen geringen Overhead, um Bandbreite zu sparen und für jedes Gerät im Internet der Dinge verwendbar zu sein.
 
-## Aufbau
+<h2 id="aufbau" style="font-size: 120%;">Aufbau</h2>
 
 In _Abbildung 6_ ist der Aufbau einer MQTT-Nachricht dargestellt. 
 
 <img src="assets/mqtt-message-header.png" alt="MQTT Message Header" style="max-width: 450px; width: 100%; display: block">
 <i style="font-size: 80%">Abbildung 6: MQTT Message Header [10].</i>
 
-Das erste Byte ist der feste MQTT-Header einer MQTT-Nachricht.
+Das erste Byte ist der feste Header einer MQTT-Nachricht.
 Davon entsprechen die ersten vier Bits dem Typ der Nachricht, das fünfte Bit kennzeichnet doppelt gesendete Nachrichten, das sechste und siebte Bit beinhalten die Übertragungsqualität und das achte Bit ist gesetzt, wenn es sich um eine [Retained Message](#retained-message) handelt.
 Das zweite Byte ist für den Header mit variabler Länge reserviert. Zusätzlich kann ein optionaler Header, der beispielsweise TLS-Daten für die Verschlüsselung enthält, an dieser Stelle eingefügt werden.
 Alle weiteren Bytes einer Nachricht sind für die Daten (Payload) vorgesehen [10].
 
-## Retained Message
+<h2 id="retained-message" style="font-size: 120%;">Retained Message</h2>
 
 Ist eine Nachricht als _retained_ markiert, dann wird diese vom MQTT-Broker so lange aufbewahrt bis eine neuere Nachricht für das entsprechende Thema verfügbar ist.
 Abonniert ein neuer Subscriber das Thema, wird ihm diese Nachricht zugestellt [5].
 
-## Letzter Wille
+<h2 id="letzter-wille" style="font-size: 120%;">Letzter Wille</h2>
 
 Ein Client kann bezogen auf ein Thema einen letzten Willen dem MQTT-Broker mitteilen. Im Fall eines unerwarteten Verbindungsabbruchs des Clients wird sein letzter Wille bezüglich eines Themas allen Abonnenten mitgeteilt [5].
 
@@ -109,11 +109,11 @@ Nur die Nutzdaten (Payload) können verschlüsselt übertragen werden.
 <i style="font-size: 80%">Abbildung 7: Ende-zu-Ende-Verschlüsselung im MQTT-Protokoll [9].</i>
 
 Bei der Ende-zu-Ende-Verschlüsselung (siehe _Abbildung 7_) werden die Nutzdaten einer Nachricht beim Versender verschlüsselt und erst beim Empfänger wieder entschlüsselt.
-Nur der Sender und Empfänger verfügen über den Schlüssel zur Entschlüsselung der Nachricht.
+Nur der Sender und Empfänger verfügen über den Schlüssel, der zur Ver- und Entschlüsselung der Nachricht verwendet wird.
 Dadurch ist es weder dem MQTT-Broker noch anderen Parteien, die beim Datenaustausch mitlesen können, möglich den Inhalt der Nachricht zu erfahren [9].
 
 <img src="assets/payload-enc-client-broker.png" alt="Client-zu-Broker-Verschlüsselung im MQTT-Protokoll" style="max-width: 450px; width: 100%; display: block">
 <i style="font-size: 80%">Abbildung 8: Client-zu-Broker-Verschlüsselung im MQTT-Protokoll [9].</i>
 
 Wenn die Nachrichten nur auf dem Weg vom Publisher zum MQTT-Broker vor dem Abhören geschützt sein sollen, eignet sich die Client-zu-Broker-Verschlüsselung (siehe _Abbildung 8_).
-In diesem Fall besteht meistens schon eine sichere Verbindung zwischen MQTT-Broker und Subscribern, weshalb die Nachrichten nicht zusätzlich verschlüsselt werden müssen [9].
+In diesem Fall besteht meistens schon eine sichere Verbindung zwischen MQTT-Broker und Subscribern, weshalb die Nachrichten auf diesem Weg nicht zusätzlich verschlüsselt werden müssen [9].
