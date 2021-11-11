@@ -1,6 +1,6 @@
-<form action="javascript:alert('!')">
+<form action="#" onsubmit="$('.add-new-terminal').click();">
     <button type="submit">
-        Let's do it
+        Zweites Terminal öffnen
     </button>
 </form>
 
