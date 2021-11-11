@@ -34,7 +34,7 @@
     }
   },
   "environment": {
-    "uilayout": "vscode-terminal-terminal-split",
+    "uilayout": "vscode-terminal-split",
     "uisettings": "javascript",
     "uieditorpath": "/root/project"
   },
