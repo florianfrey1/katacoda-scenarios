@@ -12,13 +12,14 @@ Das Sternschema ist eine einfache Form des Schneeflokenschemas (snow flake schem
 
 Eine Faktentabelle enthält die quantitativen Zahlen eines Prozesses - also Metriken und Kennzahlen [3].
 Das können beispielsweise Geschäftsereignisse wie Verkaufstransaktionen oder Anmeldungen von Kunden sein [4].
-Die Dimensionstabellen ergänzen die Faktentabellen mit beschreibenden, qualitativen Informationen. Diese Informationen dienen zusätzlich zum Filtern und Gruppieren der Fakten.
-Während Faktentabellen in der Regel sehr groß ist, weisen Dimensionstabellen nur kleine Größen auf [3].
+Die Dimensionstabellen ergänzen die Faktentabellen mit beschreibenden, qualitativen Informationen.
+Diese Informationen dienen zusätzlich zum Filtern und Gruppieren der Fakten.
+Die Faktentabellen werden in der Regel schnell sehr groß, während die Dimensionstabellen deutlich weniger Einträge enthalten [3].
 
-Der Aufbau einer Faktentabelle besteht zum einen aus den Fremdschlüssel-Attributen, die auf die Dimensionstabellen verweisen, und zum anderen den Fakten-Attributen.
+Der Aufbau einer Faktentabelle besteht zum einen aus den Fremdschlüssel-Attributen, die auf die Dimensionstabellen verweisen, und zum anderen aus den Fakten-Attributen.
 Der Primärschlüssel kann aus den Fremdschlüsseln zusammengesetzt oder ein separates Attribut sein.
 Die Dimensionstabellen verfügen über ein Primärschlüssel-Attribut, das von der Faktentabelle referenziert wird, und weiteren Attributen, die die Dimension beschreiben.
-Attribute einer Dimensionstabellen haben oft eine hierarchische Verbindung untereinander, was eine sogenannte Drill-Down-Analyse ermöglicht [3].
+Attribute einer Dimensionstabelle haben oft eine hierarchische Verbindung untereinander, was eine sogenannte Drill-Down-Analyse ermöglicht [3].
 
 # Funktionsweise
 
@@ -42,4 +43,4 @@ Eine Frage einer Geschäftsanalyse in einer dimensionalen Datenbank könnte folg
 Die Antwort lässt sich durch Eingrenzung der Dimensionen leicht bestimmen.
 
 Das Sternschema zeichnet sich also durch seine einfache Handhabung nicht zuletzt auf der Anwenderseite aus [3].
-Daher können auch Angestellte eines Unternehmens ohne fundierte Fachkenntnisse der operativen Datenbanken Analysen für Entscheidungen von Geschäftsprozessen durchführen.
+Daher können auch Angestellte eines Unternehmens, ohne fundierte Fachkenntnisse der operativen Datenbanken, Analysen für Entscheidungen von Geschäftsprozessen durchführen.
