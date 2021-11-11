@@ -78,7 +78,7 @@ Die höchste Stufe der Übertragungsqualität, QoS 2, garantiert mit Hilfe eines
 
 Nachrichten des MQTT-Protokolls haben einen geringen Overhead, um Bandbreite zu sparen und für jedes Gerät im Internet der Dinge verwendbar zu sein.
 
-<h2 id="aufbau" style="font-size: 120%;">Aufbau</h2>
+<h2 id="aufbau-von-nachrichten" style="font-size: 120%;">Aufbau von Nachrichten</h2>
 
 In _Abbildung 6_ ist der Aufbau einer MQTT-Nachricht dargestellt. 
 
